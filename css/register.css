@@ -1,0 +1,183 @@
+body,html{
+    background-color: #F1F1F1;
+}
+
+.header-in,.section-in,.footer-in{
+    width: 960px;
+    margin: 0 auto;
+}
+header,section,footer{
+    width: 100%;
+}
+
+/* header */
+header{
+    background-color: #323232;
+}
+.header-in{
+    height: 67px;
+    line-height: 67px;
+}
+.header-in .logo{
+    height: 60px;
+    line-height: 60px;  
+    width:300px;
+    color: white;
+     background: url(../img/reg-logo.png) no-repeat left center;
+}
+.header-in .logo p::before{
+    content: "";
+    margin-bottom: -3px;
+    background-color: #cccccc;
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    margin-right: 20px;
+}
+.header-in .logo p{
+    display: inline-block;
+    font-size: 18px;
+    margin-left:160px;
+    margin-top: 3px;
+}
+
+
+
+/* section */
+
+.section-in{
+    padding: 20px 0 30px;
+}
+.section-top{
+    height: 35px;
+}
+/* 切换 */
+.section-top  .toggle{
+    float: left;
+    height: 35px;
+}
+.section-top  .toggle li{
+    width: 146px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 10px;
+    float: left;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    background-color: #CBCBCB;
+}
+/* 变红 */
+.section-top  .toggle .red{
+    background-color: red;
+}
+.section-top  .toggle li>i{
+    position: absolute;
+    left: 20px;
+    top: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+}
+.section-top  .toggle li span{
+    position: absolute;
+    left: 60px;
+    display: inline-block;
+}
+.section-top .login{
+    float: right;
+    margin-top: 12px;
+    font-size: 14px;
+}
+.section-top .login>a{
+    font-size: 14px;
+    color:lightseagreen;
+}
+
+/* 中间注册块 */
+.section-in .reg{
+    background-color: white;
+    height: 474px;
+    text-align: center;
+    padding: 0px 260px;
+    padding-top: 50px;
+}
+.section-in .reg>.input li{
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #DADADA;
+    background-color: #F6F6F6;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.section-in .reg>.input li:nth-child(even){
+    margin-bottom: 30px;
+}
+/* 左边的字 */
+.reg>.input>li span{
+    font-size: 14px;
+    padding: 0 16px;
+    text-align: justify;
+    text-align-last: justify;
+    width: 90px;
+    float: left;
+    border-right: 1px solid #DADADA;
+}
+/* input里的小图标 */
+.reg>.input>li .icon>i{
+    display: inline-block;
+    margin-left:  3px;
+    margin-bottom: -5px;
+    cursor: pointer;
+    border: 6px solid transparent;
+    border-top: 6px solid #C8DEF8;
+}
+.reg>.input>li>a{
+    display: inline-block;
+    color: rgb(14, 74, 163);
+    font-size: 14px;
+}
+/* input */
+.reg>.input>li input{
+    float: left;
+    outline: none;
+    margin-top: 7px;
+    height: 28px;
+    line-height: 18px;
+    background-color: #F6F6F6;
+    padding: 0 16px;
+}
+/* 注册按钮 */
+.reg .btn{
+    width: 200px;
+    height: 40px;
+    border: 0;
+    color: white;
+    border-radius: 20px;
+    background-color: #C70000;
+    border-color: #C70000;
+    cursor: pointer;
+    outline: none;
+}
+.reg .btn:hover{
+    background-color: red;
+}
+
+/* footer */
+.footer-in{
+    border-top: 1px solid #D6D6D6;
+    height: 48px;
+    padding: 30px 0;
+    color: #999;
+    text-align: center;
+}
+.footer-in .about{
+    margin-bottom: 10px;
+}
+.footer-in .about li{
+    display: inline-block;
+}
+.footer-in .about li a{
+    color: #999;
+}

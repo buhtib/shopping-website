@@ -1,0 +1,508 @@
+
+/* header */
+header {
+    width: 100%;
+}
+
+.header-in,
+.section-in,
+.foot,
+footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* nav */
+nav {
+    height: 30px;
+}
+
+nav .nav_left {
+    float: left;
+}
+
+nav>ul>li {
+    float: left;
+    line-height: 30px;
+    padding: 0 8px;
+    position: relative;
+}
+
+/* li加边框效果 */
+nav>ul>li::before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #e4e4e4;
+}
+
+nav .nav_left li:first-child,
+nav .nav_login li:first-child {
+    padding-left: 0;
+}
+
+nav>ul>li>a {
+    color: #A3A3A3;
+    line-height: 30px;
+}
+
+nav>ul>li>a:hover {
+    color: red;
+}
+
+nav .sanjiao {
+    padding-right: 18px;
+}
+
+nav .sanjiao::after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border: 4px solid transparent;
+    border-top: 4px solid #999;
+    position: absolute;
+    top: 10px;
+    right: 4px;
+}
+
+nav .sanjiao:hover::after {
+    border: 4px solid transparent;
+    border-bottom: 4px solid #999;
+    top: 6px;
+}
+
+nav .sanjiao:hover>div,
+nav .nav_login .car:hover>div {
+    display: block;
+    z-index: 500;
+}
+
+nav .xiazai,
+.more {
+    color: #999;
+    display: none;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px 0 #999;
+}
+
+nav .xiazai {
+    white-space: nowrap;
+}
+
+nav .xiazai img {
+    margin: 5px auto;
+}
+
+nav .more a,
+nav .xiazai a {
+    color: black;
+    font-size: 14px;
+}
+
+nav .nav_login {
+    float: right;
+}
+
+nav .nav_login .car>a {
+    padding-left: 30px;
+    background: url(../img/icon-common.png) no-repeat 5px 4px;
+}
+
+
+/* 我的购物车 */
+.header-in .my-car {
+    height: 50px;
+    padding: 20px 0;
+}
+
+.header-in .my-car>a {
+    display: block;
+    float: left;
+    width: 126px;
+    height: 55px;
+    margin-right: 50px;
+    background: url(../img/logo.png) no-repeat;
+}
+
+.header-in .my-car>span {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.header-in .my-car .status {
+    width: 425px;
+    height: 50px;
+    float: right;
+    background: url(../img/car-status.png) no-repeat -2px 0;
+}
+
+/* section */
+section {
+    width: 100%;
+    background-color: #F4F4F4;
+}
+
+.section-in {
+    height: 926px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+/* 提示登陆 */
+.section-in .tip-login {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    background-color: #FEFCED;
+    border: 1px solid #E9CD86;
+}
+
+.tip-login>span {
+    color: #EAA39D;
+}
+
+.tip-login>span i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+    margin-right: 6px;
+}
+
+.tip-login>button {
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background: #ca141d;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 2px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* car-section */
+.section-in .car-section {
+    height: 356px;
+    background-color: #fff;
+    padding-top: 135px;
+    text-align: center;
+}
+
+.car-section>a,
+.car-section>p {
+    display: inline-block;
+    width: 100%;
+}
+
+.car-section>img {
+    margin: 30px auto;
+}
+
+.car-section>p {
+    color: #A3A3A3;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.car-section>a {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    background: #ca141d;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 2px;
+}
+
+/* 热销推荐 */
+
+.cite_out {
+    width: 1200px;
+    margin: 8px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 手表长滚动 */
+.cite_sweat {
+    width: 2000px;
+    height: 325px;
+}
+
+/* 滚动标题 */
+section .h4 {
+    padding: 15px 0;
+    font-size: 18px;
+}
+
+/* 左右滚动按钮 */
+section .left,
+section .right {
+    display: block;
+    background: rgba(204, 204, 204, 0.9);
+    cursor: pointer;
+    height: 75px;
+    line-height: 75px;
+    margin-top: -37.5px;
+    width: 22px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+}
+
+section .left {
+    left: 10px;
+}
+
+section .right {
+    right: 10px;
+}
+
+/* 每个块 */
+section .image-text {
+    float: left;
+    text-align: center;
+    background-color: white;
+    margin: 3px 0px 3px 10px;
+}
+
+section .image-text:first-of-type {
+    margin-left: 0;
+}
+
+section .image-text>a {
+    display: block;
+    width: 217px;
+    height: 270px;
+    padding-top: 20px;
+    position: relative;
+    font-size: 14px;
+}
+
+section .image-text>a>p {
+    margin: 5px 0;
+    color: #C6C6C6;
+}
+
+section .image-text>a .red {
+    color: red;
+}
+
+section .image-text img {
+    width: 134px;
+    height: 134px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+section .image-text>a i {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    right: 35px;
+    bottom: 116px;
+}
+
+section .image-text>a i>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* foot_out */
+.foot_out {
+    width: 100%;
+    background-color: #EFEFEF;
+}
+
+/* foot */
+.foot {
+    height: 350px;
+}
+
+.foot .foot_ser {
+    height: 140px;
+    border-bottom: 1px solid #999;
+}
+
+.foot .foot_ser li {
+    float: left;
+    width: 300px;
+    height: 140px;
+    line-height: 140px;
+}
+
+.foot .foot_ser li span {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: -20px;
+    margin-right: 10px;
+    background: url(../img/icon-common.png) no-repeat 2px -149px;
+}
+
+.foot .foot_ser li>a {
+    font-size: 16px;
+}
+
+.foot .foot_link {
+    width: 1200px;
+    height: 212px;
+    padding: 20px 0 10px 0;
+}
+
+.foot .foot_link>li {
+    height: 212px;
+    width: 170px;
+    float: left;
+}
+
+.foot .foot_link>li>dl dt {
+    padding: 10px 0;
+}
+
+.foot .foot_link>li:nth-child(6)>dl dt {
+    position: relative;
+}
+
+.foot .foot_link>li>dl::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #A7A7A7;
+}
+
+.foot .foot_link>li>dl dd a {
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 20px;
+    color: #656565;
+}
+
+.foot .link_left,
+.foot .link_right {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    background-color: #B2B2B2;
+    color: white;
+    cursor: pointer;
+}
+
+.foot .link_left {
+    right: 100px;
+}
+
+.foot .link_right {
+    right: 84px;
+}
+
+.foot .foot_link>li:last-child>dl dt h3 {
+    font-weight: 500;
+    font-size: 22px;
+    color: #393939;
+}
+
+.foot .foot_link .service {
+    display: block;
+    width: 161px;
+    height: 35px;
+    padding: 0;
+    margin-top: 10px;
+    background: #FFF;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    color: #900 !important;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.foot .foot_link .service span {
+    display: inline-block;
+    height: 18px;
+    width: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: url(../img/icon-common.png) no-repeat -101px -23px;
+}
+
+
+/* footer */
+.footer_out {
+    width: 100%;
+    background-color: #E5E5E5;
+}
+
+footer {
+    font-size: 12px;
+    padding: 26px 0 34px;
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.5;
+    background: url(../img/flogo.png) no-repeat left center;
+}
+
+footer>p {
+    margin-left: 130px;
+    /* float: left; */
+}
+
+footer>p>a {
+    color: #666;
+}
+
+footer>p>a:hover {
+    color: red;
+}
+
+footer>ul {
+    width: 300px;
+    height: 60px;
+    float: right;
+    margin-top: -30px;
+}
+
+footer>ul>li {
+    float: left;
+}
+
+footer>ul>li a {
+    display: block;
+    width: 70px;
+    height: 24px;
+}
+
+footer>ul>li a img {
+    width: 100%;
+    height: 100%;
+}
