@@ -182,6 +182,7 @@ header{
     padding: 10px 0;
     border-bottom: 1px solid #E3E3E3;
 }
+/* hover效果 */
 .reg>.input>li .drop_content>li:hover{
     background-color: lightblue;
 }
@@ -197,8 +198,9 @@ header{
 }
 /* 第一个li 的icon调下位置 */
 .reg>.input>li .drop>i{
-    margin-left:  205px;
-    margin-bottom: -4px;
+    position: absolute;
+    right: 17px;
+    top: 17px;
     border-top: 6px solid #0F7DFD;
 }
 
