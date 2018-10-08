@@ -1,0 +1,322 @@
+body,html{
+    background-color: #F1F1F1;
+}
+
+.header-in,.footer-in{
+    width: 998px;
+    margin: 0 auto;
+}
+header,section,footer{
+    width: 100%;
+}
+
+/* header */
+header{
+    background-color: #EAEAEA;
+}
+.header-in{
+    height: 67px;
+    line-height: 67px;
+}
+.header-in .logo{
+    height: 60px;
+    line-height: 60px;  
+    width:300px;
+    color:#323232;
+     background: url(../img/login_logo.png) no-repeat left 16px;
+}
+.header-in .logo p::before{
+    content: "";
+    margin-bottom: -3px;
+    background-color: #cccccc;
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    margin-right: 20px;
+}
+.header-in .logo p{
+    display: inline-block;
+    font-size: 18px;
+    margin-left:160px;
+    margin-top: 5px;
+}
+
+/* section */
+/* 上方提示 */
+.section-top{
+    height: 40px;
+    background-color: #FEFAE4; 
+    line-height: 40px;
+    text-align: center;
+}
+.section-top>span{
+    color: #979797;
+   padding-left: 4px;
+}
+.section-top>i{
+    color: #979797;
+    font-size: 14px;
+}
+
+/* 中间注册块 */
+section .login{
+    width: 100%;
+    background-color: #081638;
+}
+section .login_in{
+    width: 1130px;
+    height: 590px;
+    margin: 0 auto;
+    background: url(../img/login_sec.png) no-repeat;   
+}
+/* 登陆框 */
+.pop-ups{
+    text-align: center;
+    margin: 30px 0;
+    float: right;
+    height: 530px;
+    width: 380px;
+    border: 1px solid black;
+    z-index: 1000;
+    background-color: white;
+}
+/* 切换 */
+.pop-ups .switch{
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 24px;
+}
+.pop-ups .switch li{
+    float: left;
+    height: 20px;
+    width: 169px;
+    padding:0 10px; 
+    cursor: pointer;
+}
+.pop-ups .switch li:hover{
+    color: red;
+}
+.pop-ups .switch li:first-child{
+    color: #B40707;
+    border-right: 1px solid #CBCBCB;
+}
+
+/* 下方登陆开始、 */
+.pop-down{
+    width: 328px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* 输入登陆信息 */
+.pop-down .pop-login li{
+    padding: 14px 0;
+    border-bottom: 1px solid #CBCBCB;
+}
+.pop-down .pop-login li input{
+    width: 100%;
+    font-size: 14px;
+    height: 20px;
+    outline: none;
+}
+/* 短信验证 */
+.pop-down .message{
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+.pop-down .message a{
+    display: inline-block;
+    color: #0F7DFD;
+}
+.pop-down .message  i{
+    color: #0F7DFD;
+    position: relative;
+    top: 2px;
+}
+/* 登录按钮 */
+.pop-down>button{
+    color: white;
+    outline: none;
+    border: 0;
+    width: 100%;
+    border-radius: 50%;
+    line-height: 44px;
+    height: 44px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 26px;
+    text-align: center;
+    background-color: #B40707;
+}
+.pop-down .reb{
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+    text-align: left;
+}
+/* checkbox修改 */
+.pop-down .reb input[type='checkbox']{
+    display: inline-block;
+    margin-bottom: -3px;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    outline: none;
+}
+.pop-down .reb input[type='checkbox']:checked::after{
+    text-align: center;
+    display:inline-block;
+    width: 14px;
+    height: 14px;
+    content: "✓";
+    background-color: #0F7DFD; 
+    color: white;
+}
+.pop-down .reb a{
+    display: inline-block;
+    color: #007dff;
+    float: right;
+}
+/* 注册账号 */
+.pop-down .reg{
+    display: inline-block;
+    height: 20px;
+}
+.pop-down .reg li{
+    float: left;
+}
+.pop-down .reg li:first-child a{
+    border-right: 1px solid #CBCBCB;
+}
+.pop-down .reg li a{
+    padding: 0 20px;
+    color: #0A64CA;
+}
+/*  其他方式登陆  */
+.pop-down .change-login{
+   margin-top: 105px;
+}
+.pop-down .change-login span{
+    color: #CECECE;
+}
+.pop-down .change-login span::before,.pop-down .change-login span::after{
+    content: "";
+    background-color: #CECECE;
+    height: 1px;
+    display: inline-block;
+    width: 120px;
+    float: left;
+    margin-top: 6px;
+}
+.pop-down .change-login span::after{
+    float: right;
+}
+/* qq，支付宝，微信 */
+.change-login>ul{
+    height: 44px;
+    line-height: 44px;
+    padding: 10px 0;
+    text-align: center;
+}
+.change-login>ul>li{
+    display: inline-block;
+    padding: 0 10px;
+}
+.change-login>ul>li a{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.change-login>ul>li a:hover>i{
+    color: #3198E8;
+}
+.change-login>ul>li a>i{
+    font-size: 42px;
+    color: #b7b7b7;
+}
+
+/* 点击扫码切换的界面 */
+.pop-down-right{
+    width: 380px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: none;
+}
+
+/* 二维码 */
+.pop-down-right .ma_out{
+    display: inline-block;
+    position: relative;
+    left: 75px;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    margin: 50px 0 90px;
+    border: 1px solid black;
+    transition: 0.5s;
+    z-index: 1;
+}
+/* 大盒子hover控制img */
+.pop-down-right .hover_box:hover>.ma_out{
+    transition: 0.5s;
+    transform: translateX(-90px);
+}
+.pop-down-right .hover_box:hover>.box_hide{
+    transition: 0.5s;
+    opacity: 1;
+}
+/* 隐藏手机块 */
+.pop-down-right .box_hide{
+    transition: 0.5s;
+    width:110px;
+    height: 260px;
+    opacity: 0;
+    background-color: #0A64CA;
+    float: right;
+    margin-right: 24px;
+}
+.pop-down-right>p{
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+.pop-down-right>p span{
+    color: #0A64CA;
+}
+
+/* footer */
+.footer-in{
+    height: 40px;
+    padding: 20px 0;
+    color: #999;
+    text-align: center;
+}
+.footer-in .about{
+    margin:2px 0 10px;
+}
+.footer-in .about li{
+    display: inline-block;
+}
+.footer-in .about li a{
+    color: #999;
+    padding: 0 13px;
+}
+.footer-in .about li span{
+    width: 1px;
+    background-color: #999;
+    height: 16px;
+    margin-bottom: -4px;
+    display: inline-block;
+}
+.footer-in .about li a:hover{
+    text-decoration: underline;
+}

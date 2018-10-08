@@ -3,7 +3,7 @@ html {
     background-color: #F4F4F4;
 }
 
-article,nav,header,.classify,section,.small_Carousel,.iphone,footer,.foot {
+article,nav,header,.classify,section,.small_Carousel,.iphone,footer,.foot,.ad-in {
     width: 1200px;
     margin: 0 auto;
 }
@@ -11,18 +11,21 @@ article,nav,header,.classify,section,.small_Carousel,.iphone,footer,.foot {
 
 /* ad */
 .ad,.banner {
-    width: 100%;
+    height: 90px;
     margin: 0 auto;
+    overflow: hidden;
 }
-
-.ad {
+.ad-in{
     height: 90px;
 }
-
-.ad img {
-    width: 100%;
-    height: 100%;
+.ad-in>a{
+    display: inline-block;
+    margin-left: -960px;
+    width: 1920px;
+    position: relative;
+    left: 50%;
 }
+
 
 /* nav */
 nav {
@@ -41,7 +44,7 @@ nav>ul>li {
 }
 
 /* li加边框效果 */
-nav>ul>li::before {
+nav>ul>li::before{
     content: "";
     width: 1px;
     height: 10px;
@@ -107,7 +110,7 @@ nav .xiazai,.more,nav .nav_login .car_in {
 
 nav .xiazai img,
 nav .nav_login .car_in img {
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 nav .more a,
@@ -120,13 +123,20 @@ nav .nav_login {
     float: right;
 }
 
+nav .nav_login>li:first-child::before{
+    width: 0;
+}
+
+nav .nav_login .car{
+    padding: 0;
+}
 nav .nav_login .car>a {
-    padding-left: 30px;
+    padding-left: 20px;
     background: url(../img/icon-common.png) no-repeat 5px 0px;
 }
 
 nav .nav_login .car_in {
-    width: 400px;
+    width: 460px;
     padding: 30px 0;
     z-index: 500;
 }
@@ -134,13 +144,14 @@ nav .nav_login .car_in {
 /* header */
 header {
     height: 50px;
-    /* padding: 10px; */
+    padding: 10px 0;
 }
 
 header>h1 {
     height: 50px;
     width: 240px;
     float: left;
+    margin-right: 40px;
     background: url(../img/logo.png) no-repeat left center;
 }
 
@@ -148,7 +159,6 @@ header>ul {
     height: 50px;
     line-height: 50px;
     float: left;
-    margin-left: 60px;
 }
 
 header>ul>li {
@@ -162,8 +172,8 @@ header>ul>li:hover a {
 }
 
 header>ul>li>a {
-    font-size: 14px;
-    color: black;
+    font-size: 16px;
+    color: #3a3a3a;
     padding-bottom: 6px;
 }
 

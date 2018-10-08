@@ -9,7 +9,7 @@ a,u{text-decoration:none;color: black;}
 h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:normal;}
 #top,#nav#banner{width:1000px;margin:0 auto;}
 img{display:block;border:0;}/*清除与div父级之间下方3px的间距*/
-input{border:0;}
+input,button{border:0;}
 .clear:after{  
              content: "";
                 display: block;
