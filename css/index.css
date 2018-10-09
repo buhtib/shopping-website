@@ -12,7 +12,7 @@ article,nav,header,.classify,section,.small_Carousel,.iphone,footer,.foot,.ad-in
 /* ad */
 .ad,.banner {
     height: 90px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     overflow: hidden;
 }
 .ad-in{
@@ -20,7 +20,7 @@ article,nav,header,.classify,section,.small_Carousel,.iphone,footer,.foot,.ad-in
 }
 .ad-in>a{
     display: inline-block;
-    margin-left: -960px;
+    margin-left: -960px; 
     width: 1920px;
     position: relative;
     left: 50%;
@@ -44,7 +44,7 @@ nav>ul>li {
 }
 
 /* li加边框效果 */
-nav>ul>li::before{
+nav>.nav_left>li::before,nav .nav_login>li:nth-child(n+3)::before{
     content: "";
     width: 1px;
     height: 10px;
@@ -65,7 +65,7 @@ nav>ul>li>a {
 }
 
 nav>ul>li>a:hover {
-    color: red;
+    color: #C9151D;
 }
 
 nav .sanjiao {
@@ -78,16 +78,16 @@ nav .sanjiao::after {
     height: 0;
     display: block;
     border: 4px solid transparent;
-    border-top: 4px solid #999;
+    border-top: 6px solid #999;
     position: absolute;
-    top: 10px;
+    top: 11px;
     right: 4px;
 }
 
 nav .sanjiao:hover::after {
     border: 4px solid transparent;
-    border-bottom: 4px solid #999;
-    top: 6px;
+    border-bottom: 6px solid #999;
+    top: 7px;
 }
 
 nav .sanjiao:hover>div,
@@ -118,21 +118,21 @@ nav .xiazai a {
     color: black;
     font-size: 14px;
 }
-
+/* nav 右边li */
 nav .nav_login {
     float: right;
 }
 
-nav .nav_login>li:first-child::before{
-    width: 0;
-}
-
-nav .nav_login .car{
-    padding: 0;
+nav .nav_login>li{
+    padding: 0 7px;
 }
 nav .nav_login .car>a {
-    padding-left: 20px;
-    background: url(../img/icon-common.png) no-repeat 5px 0px;
+    padding-left: 3px;
+}
+nav .nav_login .car>a>i{
+    display: inline-block;
+    font-size: 16px;
+    width: 26px;
 }
 
 nav .nav_login .car_in {
@@ -149,7 +149,7 @@ header {
 
 header>h1 {
     height: 50px;
-    width: 240px;
+    width: 230px;
     float: left;
     margin-right: 40px;
     background: url(../img/logo.png) no-repeat left center;
@@ -167,8 +167,8 @@ header>ul>li {
 }
 
 header>ul>li:hover a {
-    color: red;
-    border-bottom: 2px solid red;
+    color: #C9151D;
+    border-bottom: 2px solid #C9151D;
 }
 
 header>ul>li>a {
@@ -176,7 +176,7 @@ header>ul>li>a {
     color: #3a3a3a;
     padding-bottom: 6px;
 }
-
+/* 搜索框 */
 header .search {
     float: right;
     height: 30px;
@@ -185,7 +185,7 @@ header .search {
 }
 
 header .search>i {
-    width: 30px;
+    width: 27px;
     height: 30px;
     position: absolute;
     right: 5px;
@@ -194,10 +194,12 @@ header .search>i {
 }
 
 header .search input {
-    border: 1px solid #999;
-    width: 328px;
+    border: 1px solid #DCDCDC;
+    padding-left: 10px;
+    width: 318px;
     height: 30px;
     font-size: 14px;
+    outline: none;
 }
 
 header .search .input_on {
@@ -207,11 +209,15 @@ header .search .input_on {
 }
 
 header .search .input_on span {
-    margin-left: 3px;
-    padding: 1px;
+    cursor: pointer;
+    margin-right: 11px;
+    padding: 2px;
     display: inline-block;
     background-color: #F4F4F4;
     color: #A3A3A3;
+}
+header .search .input_on span:hover{
+    color: #C9151D;
 }
 
 /* banner */
@@ -235,19 +241,26 @@ header .search .input_on span {
 
 .banner .banner_list {
     position: absolute;
-    bottom: 40px;
+    text-align: center;
+    width: 220px;
+    bottom: 30px;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -110px;
     height: 10px;
     z-index: 600;
 }
 
 .banner .banner_list>li {
+    cursor: pointer;
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 2px solid white;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+.banner .banner_list>li:last-child{
+    margin-right: 0;
 }
 
 /* banner左侧导航栏 */
@@ -274,14 +287,15 @@ header .search .input_on span {
 
 .banner_left>li .category-iphone>li {
     margin-right: 10px;
-    margin-top: 5px;
+    margin-top: 1px;
     float: left;
 }
-
+/* 左边块的 > icon*/
 .banner_left>li .category-iphone>li:last-of-type {
-    font-weight: bolder;
     float: right;
-    margin-top: 10px;
+    margin: 0;
+    margin-right: -10px;
+    margin-top: 6px;
 }
 
 .banner_left>li:hover {
@@ -291,7 +305,7 @@ header .search .input_on span {
 
 /* 隐藏的块 */
 .banner_left .category-iphone .category-detail {
-    height: 448px;
+    height: 449px;
     width: 648px;
     display: none;
     position: absolute;
@@ -317,14 +331,16 @@ header .search .input_on span {
 
 /* see */
 .banner_left .category-iphone .category-detail .see {
-    padding: 25px;
-    padding-right: 15px;
-    color: red;
+    height: 30px;
+    line-height: 30px;
+    padding:20px 0px 20px 40px;
+    color: #C9151D;
     border-bottom: 1px solid #E9E9E9;
 }
 
 .banner_left .category-iphone .category-detail .see span:last-child {
     float: right;
+    margin-right: 28px;
 }
 
 /* type */
@@ -336,21 +352,31 @@ header .search .input_on span {
     margin-top: 30px;
     margin-right: 20px;
     float: left;
+    cursor: pointer;
+}
+.banner_left .category-iphone .category-detail .type>ul>li:hover{
+    color: #C9151D;
 }
 
 /* type_img */
 .banner_left .category-iphone .category-detail .type_img {
+    cursor: pointer;
     width: 648px;
 }
 
 .banner_left .category-iphone .category-detail .type_img ul li {
     width: 120px;
-    padding: 26px 20px 29px 20px;
+    padding: 26px 21px 27px 20px;
     border: 1px solid #E9E9E9;
+    border-left: 0;
     text-align: center;
     float: left;
 }
-
+.banner_left .category-iphone .category-detail .type_img ul li:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 15px 30px;
+    transform: translateY(-1px);
+    transition: 0.4s;
+}
 .banner_left .category-iphone .category-detail .type_img ul li>img {
     margin: 0 auto;
     margin-bottom: 20px;
@@ -359,19 +385,15 @@ header .search .input_on span {
 }
 
 .banner_left .category-iphone .category-detail .type_img ul li>p {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
-.banner_left .category-iphone .category-detail .type_img ul li:nth-child(0) {
-    border-left: 0;
-}
-
-.banner_left .category-iphone .category-detail .type_img ul li:nth-child(4) {
+.banner_left .category-iphone .category-detail .type_img ul li:last-child {
     border-right: 0;
 }
 
 .banner_left .category-iphone .category-detail .type_img ul li>span {
-    color: red;
+    color: #C9151D;
 }
 
 /* article */
@@ -380,6 +402,7 @@ article {
     height: 97px;
     width: 1198px;
     border-top: 0px;
+    background-color: white;
 }
 
 article>ul>li {
@@ -388,9 +411,8 @@ article>ul>li {
 
 /* login 登录注册 */
 article .login {
-    padding: 15px;
-    width: 258px;
-    padding-bottom: 0;
+    padding: 13px 18px 20px 22px;
+    width: 248px;
     position: relative;
 }
 
@@ -412,6 +434,9 @@ article .login>img {
 }
 
 article .login>span {
+    margin-left: 10px;
+    display: inline-block;
+    width: 162px;
     line-height: 18px;
     color: rgb(150, 148, 148);
 }
@@ -422,20 +447,22 @@ article .login>span>a {
 }
 
 article .login>span>a:hover {
-    color: red;
+    color: #C9151D;
 }
 
 article .login>p {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 article .login>p>a {
-    border: 1px solid red;
-    color: red;
+    padding: 2px 5px;
+    margin-left: 10px;
+    border: 1px solid #C9151D;
+    color: #C9151D;
 }
 
 article .login>p>a:hover {
-    background-color: red;
+    background-color: #C9151D;
     color: white;
 }
 
@@ -467,13 +494,14 @@ article .article_ser li>a {
 }
 
 article .article_ser li:hover>a {
-    color: red;
+    color: #C9151D;
 }
 
 article .article_ser li>a>span {
     display: block;
     width: 60px;
-    height: 20px;
+    height: 22px;
+    line-height: 22px;
     margin-left: -10px;
 }
 
@@ -487,13 +515,13 @@ article .placard h4 {
     height: 25px;
     line-height: 25px;
     border-bottom: 1px solid #E9E9E9;
-    padding: 10px 0 12px 10px;
+    padding: 13px 0 12px 13px;
     font-size: 14px;
 }
 
 article .placard h4>span {
     font-weight: bold;
-    color: red;
+    color: #C9151D;
     margin-right: 10px;
 }
 
@@ -516,7 +544,7 @@ article .placard>ul>li>span {
 }
 
 article .placard>ul>li:hover>a {
-    color: red;
+    color: #C9151D;
 }
 /* 独立推荐4个块 */
  .classify{
@@ -526,6 +554,10 @@ article .placard>ul>li:hover>a {
  .classify li{
    float: left;
    margin-left: 12px;
+}
+.classify li:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 15px 30px;
+    transition: 0.4s;
 }
 .classify li:first-child{
     margin-left: 0;
@@ -538,14 +570,20 @@ section .hot{
 }
 section  .h4{
     padding: 10px 0; 
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 400;
 }
 section .hot>li{
     float: left;
 }
+section .hot>li:hover,section .hot .hot-right>ul>li a:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 15px 30px;
+    transform: translateY(-1px);
+    transition: 0.4s;
+}
 section .hot .hot-right>ul{
     width: 968px;
-    height: 620px;
+    height: 590px;
 }
 section .hot .hot-right>ul>li{
     float: left;
@@ -565,8 +603,8 @@ section .hot .hot-right>ul>li>a>p{
     margin: 5px 0;
     color: #C6C6C6;
 }
-section .hot .hot-right>ul>li>a .red{
-   color: red;
+section .hot .hot-right>ul>li>a .#C9151D{
+   color: #C9151D;
 }
 section .hot .hot-right>ul>li img{
     width: 148px;
@@ -618,8 +656,8 @@ section .image-text>a>p{
     margin: 5px 0;
     color: #C6C6C6;
 }
-section .image-text>a .red{
-   color: red;
+section .image-text>a .#C9151D{
+   color: #C9151D;
 }
 section .image-text img{
     width: 134px;
@@ -662,7 +700,7 @@ section .right{
    right: 0;
 }
 
-/* small_Carousel */
+/* small_Carousel小轮播图 */
 .small_Carousel{
     height: 120px;
     position: relative;
@@ -690,12 +728,14 @@ section .right{
 }
 
 .small_Carousel_list>li {
+    cursor: pointer;
     display: inline-block;
     width: 10px;
     height: 10px;
+    margin-right: 2px;
     border-radius: 50%;
-    border: 2px solid white;
-}
+    border: 1px solid white;
+} 
 
 /* 手机专区 */
 .iphone{
@@ -730,8 +770,8 @@ section .right{
     color: #A3A3A3;
 }
 .iphone_on .iphone-link li:hover a{
-    color: red;
-    border-bottom: 2px solid red;
+    color: #C9151D;
+    border-bottom: 2px solid #C9151D;
 }
 
 .iphone_down{
@@ -760,8 +800,8 @@ section .right{
     margin: 5px 0;
     color: #C6C6C6;
 }
-.iphone_down>li>a .red{
-   color: red;
+.iphone_down>li>a .#C9151D{
+   color: #C9151D;
 }
 .iphone_down>li img{
     width: 178px;
@@ -979,7 +1019,7 @@ footer>p>a{
     color: #666;
 }
 footer>p>a:hover{
-    color: red;
+    color: #C9151D;
 }
 footer>ul{
     width: 300px;
@@ -1028,7 +1068,7 @@ footer>ul>li a img{
 }
 #jump li{
    width: 100px;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #C9151D;
 }
 #jump li a{ 
     display: block;
@@ -1038,5 +1078,5 @@ footer>ul>li a img{
     height: 46px;
 }
 #jump li a:hover{
-    color: red;
+    color: #C9151D;
 }

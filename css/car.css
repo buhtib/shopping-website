@@ -29,7 +29,7 @@ nav>ul>li {
 }
 
 /* li加边框效果 */
-nav>ul>li::before {
+nav>.nav_left>li::before {
     content: "";
     width: 1px;
     height: 10px;
@@ -122,28 +122,28 @@ nav .nav_login .car>a {
 /* 我的购物车 */
 .header-in .my-car {
     height: 50px;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .header-in .my-car>a {
     display: block;
     float: left;
-    width: 126px;
-    height: 55px;
-    margin-right: 50px;
-    background: url(../img/logo.png) no-repeat;
+    width: 94px;
+    height: 50px;
+    margin-right: 26px;
+    background: url(../img/car_logo.png) no-repeat;
 }
 
 .header-in .my-car>span {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 50px;
 }
 
 .header-in .my-car .status {
-    width: 425px;
+    width: 440px;
     height: 50px;
     float: right;
-    background: url(../img/car-status.png) no-repeat -2px 0;
+    background: url(../img/car-status.png) no-repeat -1px 2px;
 }
 
 /* section */
@@ -155,7 +155,6 @@ section {
 .section-in {
     height: 926px;
     padding-top: 10px;
-    padding-bottom: 40px;
 }
 
 /* 提示登陆 */
@@ -163,36 +162,33 @@ section {
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    margin-bottom: 15px;
-    background-color: #FEFCED;
-    border: 1px solid #E9CD86;
+    margin-bottom: 20px;
+    background-color: #fffdee;
+    border: 1px solid #eace85;
 }
 
 .tip-login>span {
-    color: #EAA39D;
+    color:#ca141d;
 }
 
 .tip-login>span i {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: aqua;
-    margin-right: 6px;
+    margin-right: 3px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.tip-login>button {
+.tip-login>a{
     width: 70px;
     height: 30px;
     line-height: 30px;
     display: inline-block;
     background: #ca141d;
     color: #fff;
+    font-size: 12px;
     text-align: center;
     margin-left: 10px;
     border-radius: 2px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
 }
 
 /* car-section */
@@ -210,80 +206,87 @@ section {
 }
 
 .car-section>img {
-    margin: 30px auto;
+    margin: 0px auto;
+    margin-bottom: 30px;
 }
 
 .car-section>p {
     color: #A3A3A3;
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 16px;
+    font-size: 18px;
 }
 
 .car-section>a {
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    background: #ca141d;
+    width: 172px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
     color: #fff;
-    text-align: center;
-    margin-left: 10px;
+    display: block;
+    margin: 0 auto;
+    background: #ca141d;
     border-radius: 2px;
 }
 
-/* 热销推荐 */
 
+/* 热销推荐 */
 .cite_out {
     width: 1200px;
-    margin: 8px auto;
-    overflow: hidden;
+    margin: 0px auto;
     position: relative;
-}
-
-/* 手表长滚动 */
-.cite_sweat {
-    width: 2000px;
-    height: 325px;
+    background-color: white;
 }
 
 /* 滚动标题 */
 section .h4 {
-    padding: 15px 0;
+    font-size: #3a3a3a;
+    padding: 30px 0 10px;
     font-size: 18px;
+    background-color: #F3F3F3;
 }
 
+/* 手表长滚动 */
+section .cite_sweat_out{
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+    height: 236px;
+}
+/* 包在里面的ul */
+section .cite_sweat{
+    position: absolute;
+    width: 1300px;
+    height: 236px;
+    /* z-index: 5; */
+}
+
+
 /* 左右滚动按钮 */
-section .left,
-section .right {
-    display: block;
-    background: rgba(204, 204, 204, 0.9);
-    cursor: pointer;
-    height: 75px;
-    line-height: 75px;
-    margin-top: -37.5px;
-    width: 22px;
-    color: white;
-    text-align: center;
+section .cite_out>span{
+    color: #BBBBBB;
     font-size: 18px;
     font-weight: bold;
     position: absolute;
     top: 50%;
+    margin-top: 20px;
     z-index: 3;
+}
+section .cite_out>span:hover{
+    color: #ca141d;
 }
 
 section .left {
-    left: 10px;
+    left: 24px;
 }
 
 section .right {
-    right: 10px;
+    right: 24px;
 }
 
-/* 每个块 */
+/* 滚动的每个块 */
 section .image-text {
     float: left;
     text-align: center;
-    background-color: white;
     margin: 3px 0px 3px 10px;
 }
 
@@ -291,13 +294,14 @@ section .image-text:first-of-type {
     margin-left: 0;
 }
 
-section .image-text>a {
+section .image-text>a{
     display: block;
-    width: 217px;
-    height: 270px;
+    width: 250px;
+    height: 198px;
     padding-top: 20px;
     position: relative;
     font-size: 14px;
+    text-align: center;
 }
 
 section .image-text>a>p {
@@ -313,21 +317,14 @@ section .image-text img {
     width: 134px;
     height: 134px;
     margin: 0px auto;
-    margin-bottom: 20px;
 }
-
-section .image-text>a i {
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 50px;
-    right: 35px;
-    bottom: 116px;
+/* 文字 */
+section .image-text>a span{
+    display:block;
+    margin: 0 auto;
 }
-
-section .image-text>a i>img {
-    width: 100%;
-    height: 100%;
+section .image-text>a span:first-of-type{
+    margin: 6px 0 20px;
 }
 
 /* foot_out */
@@ -343,7 +340,7 @@ section .image-text>a i>img {
 
 .foot .foot_ser {
     height: 140px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #E7E7E7;
 }
 
 .foot .foot_ser li {
@@ -374,12 +371,13 @@ section .image-text>a i>img {
 
 .foot .foot_link>li {
     height: 212px;
-    width: 170px;
+    width: 157px;
     float: left;
 }
 
 .foot .foot_link>li>dl dt {
-    padding: 10px 0;
+    font-size: 14px;
+    padding: 10px 0 12px;
 }
 
 .foot .foot_link>li:nth-child(6)>dl dt {
@@ -397,7 +395,7 @@ section .image-text>a i>img {
 .foot .foot_link>li>dl dd a {
     font-size: 12px;
     white-space: nowrap;
-    line-height: 20px;
+    line-height: 24px;
     color: #656565;
 }
 
@@ -416,22 +414,31 @@ section .image-text>a i>img {
 }
 
 .foot .link_left {
-    right: 100px;
+    right: 80px;
 }
 
 .foot .link_right {
-    right: 84px;
+    right:60px;
 }
 
 .foot .foot_link>li:last-child>dl dt h3 {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 24px;
     color: #393939;
+}
+
+/* 最后一个li */
+.foot .foot_link>li:last-child{
+    width: 170px;
+    margin-left: 40px;
+}
+.foot .foot_link>li:last-child .tel_next{
+    line-height: 16px;
 }
 
 .foot .foot_link .service {
     display: block;
-    width: 161px;
+    width: 170px;
     height: 35px;
     padding: 0;
     margin-top: 10px;
@@ -469,27 +476,29 @@ footer {
     margin: 0 auto;
     color: #666;
     line-height: 1.5;
-    background: url(../img/flogo.png) no-repeat left center;
+    background: url(../img/flogo.png) no-repeat left 50px;
 }
 
 footer>p {
     margin-left: 130px;
+    line-height: 20px;
+    color: #a4a4a4;
     /* float: left; */
 }
 
 footer>p>a {
-    color: #666;
+    color: #a4a4a4;
 }
 
 footer>p>a:hover {
-    color: red;
+    color: #ca141d;
 }
 
 footer>ul {
     width: 300px;
     height: 60px;
     float: right;
-    margin-top: -30px;
+    margin-top: -40px;
 }
 
 footer>ul>li {
@@ -497,6 +506,7 @@ footer>ul>li {
 }
 
 footer>ul>li a {
+    margin-left: 4px;
     display: block;
     width: 70px;
     height: 24px;

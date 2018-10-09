@@ -239,6 +239,9 @@ section .login_in{
 .change-login>ul>li a:hover>i{
     color: #3198E8;
 }
+.change-login>ul>li:last-child a:hover>i{
+    color: green;
+}
 .change-login>ul>li a>i{
     font-size: 42px;
     color: #b7b7b7;
@@ -280,7 +283,7 @@ section .login_in{
     width:110px;
     height: 260px;
     opacity: 0;
-    background-color: #0A64CA;
+    margin-top: 25px;
     float: right;
     margin-right: 24px;
 }

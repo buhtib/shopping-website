@@ -24,7 +24,7 @@ input,button{border:0;}
 .active{
     background-color: white;
 }
-*{transition: 0.1s}
+/* *{transition: 0.05s} */
 body,
 html {
     width: 100%;

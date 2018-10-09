@@ -9,78 +9,11 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/car.css">
-    <link rel="stylesheet" href="css/pop.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_863490_ov1wp2mvnu.css">
     <script src="js/jquery.js"></script>
 </head>
 
 <body>
-     <!-- 弹窗外部蒙版 -->
-     <div class="pop_out">
-            <!-- 请登录弹窗 -->
-            <div class="pop-ups">
-                <!-- 最上方，带小叉关闭功能 -->
-                <h4> <a href=""><img src="img/off.png" alt=""> </a> </h4>
-                 <!-- 登陆切换 -->
-                 <ul class="switch">
-                        <li class="z-login">账号登陆</li>
-                        <li class="s-login">扫码登陆</li>
-                    </ul>
-               <div class="pop-down">
-                        <!-- 登陆 -->
-                        <ul class="pop-login">
-                            <li><input type="text" placeholder="手机号/邮件地址" autofocus></li>
-                            <li><input type="text" placeholder="密码"></li>
-                        </ul>
-                        <!-- 短信验证 -->
-                        <div class="message">
-                            <a href=""><i></i>短信验证码登录</a>
-                        </div>
-                        <!-- 登陆 按钮-->
-                        <button>登录</button>
-                        <!-- 记住账号 -->
-                        <div class="reb">
-                                <input type="checkbox" id="pass" > <label for="pass" >记住华为账号</label> 
-                            <a href="">更多</a>
-                        </div>
-                        <!-- 注册和找回密码 -->
-                        <ul class="reg">
-                            <li><a href="register.html" target="_blank">注册账号</a></li>
-                            <li><a href="">忘记密码？</a></li>
-                        </ul>
-                        <!-- 其他方式登陆 -->
-                       <div class="change-login">
-                           <span>其他方式登陆</span>
-                           <ul class="clear">
-                               <li><a href=""></a></li>
-                               <li><a href=""></a></li>
-                               <li><a href=""></a></li>
-                           </ul> 
-                       </div>
-                     
-               </div>
-                 <!-- 点击扫码切换的界面 -->
-                 <div class="pop-down-right">
-                     <!-- 二维码 -->
-                        <div class="ma_out">
-                            <img src="img/getqrWeb.jpg" alt="">
-                        </div>
-                        <div class="box_hide">
-        
-                        </div>
-                        <p>
-                            使用<span>华为移动服务APP</span>扫一扫<br>
-                            若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。
-                        </p>
-                    </div>
-                    <!-- 一眼看过就好 -->
-                    <p> 
-                         继续访问即代表您已同意
-                         <a href="">华为商城服务协议</a>和
-                         <a href="">华为隐私政策</a>
-                      </p>
-            </div>
-        </div>
-        
 
     <!-- header -->
     <header>
@@ -89,8 +22,8 @@
             <nav>
                 <!-- 导航条左侧导航 -->
                 <ul class="nav_left clear">
-                    <li><a href="index.html" target="_blank">首页</a></li>
-                    <li><a href="http://">哈哈哈</a></li>
+                    <li><a href="start.html" target="_blank">首页</a></li>
+                    <li><a href="start.html">华为商城</a></li>
                     <li><a href="http://">哈哈哈</a></li>
                     <li><a href="http://">哈哈哈</a></li>
                     <li><a href="http://">哈哈哈</a></li>
@@ -118,7 +51,7 @@
                 </ul>
                 <!-- 注册，登陆，购物车 -->
                 <ul class="nav_login clear">
-                    <li><a href="javascript:void(0)" class="target-login">请登录</a></li>
+                    <li><a href="login.html" class="target-login">请登录</a></li>
                     <li><a href="register.html" target="_blank">注册</a></li>
                     <li><a href="http://">我的订单</a></li>
                 </ul>
@@ -139,81 +72,72 @@
     <section>
         <div class="section-in">
             <div class="tip-login">
-                <span><i></i> 您还没有登录！登录后可查看之前加入的商品</span>
-                <button class="target-login">登陆</button>
+                <span><i class="shop hw-login-tip"></i> 您还没有登录！登录后可查看之前加入的商品</span>
+                <a href="login.html" class="target-login">登录</a>
             </div>
             <div class="car-section">
                 <img src="img/car.png" alt="">
                 <p>你的购物车里什么也没有哦~</p>
-                <a href="index.html">去逛逛</a>
+                <a href="start.html">去逛逛</a>
             </div>
-              <!-- 滚动图 ，手表-->
-        <div class="cite_out">
+            <!-- 滚动图 ，手表-->
+            <div class="cite_out">
+                <!-- 滚动标题 -->
+                <h4 class="h4">热销推荐</h4>
+                <!-- 左图标 -->
+                <span class="shop hw-zuojiantou left"></span>
+                <!-- 右图标 -->
+                <span class="shop hw-youjiantou right"></span>
                 <!-- 手表，滚动图 -->
-                <ul class="cite_sweat">
-                    <!-- 滚动标题 -->
-                    <h4 class="h4">热销推荐</h4>
-                    <!-- 左图标 -->
-                    <span class="left">
-                        <</span> <!-- 右图标 -->
-                            <span class="right">></span>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/cite_sweat.jpg" alt="">
-                                    <i><img src="img/new_pay.png" alt=""> </i>
-                                    <span>HUAWEI P20</span>
-                                    <p>新一代莱卡双摄 AI摄影大师</p>
-                                    <span class="red">￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/cite_sweat.jpg" alt="">
-                                    <i><img src="img/new_pay.png" alt=""> </i>
-                                    <span>HUAWEI P20</span>
-                                    <p>新一代莱卡双摄 AI摄影大师</p>
-                                    <span class="red">￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/cite_sweat.jpg" alt="">
-                                    <i><img src="img/new_pay.png" alt=""> </i>
-                                    <span>HUAWEI P20</span>
-                                    <p>新一代莱卡双摄 AI摄影大师</p>
-                                    <span class="red">￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/cite_sweat.jpg" alt="">
-                                    <i><img src="img/new_pay.png" alt=""> </i>
-                                    <span>HUAWEI P20</span>
-                                    <p>新一代莱卡双摄 AI摄影大师</p>
-                                    <span class="red">￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/cite_sweat.jpg" alt="">
-                                    <i><img src="img/new_pay.png" alt=""> </i>
-                                    <span>HUAWEI P20</span>
-                                    <p>新一代莱卡双摄 AI摄影大师</p>
-                                    <span class="red">￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/cite_sweat.jpg" alt="">
-                                    <i><img src="img/new_pay.png" alt=""> </i>
-                                    <span>HUAWEI P20</span>
-                                    <p>新一代莱卡双摄 AI摄影大师</p>
-                                    <span class="red">￥3388</span>
-                                </a>
-                            </li>
-                </ul>
+                <div class="cite_sweat_out">
+                    <ul class="cite_sweat">
+                        <li class="image-text">
+                            <a href="">
+                                <img src="img/car_move1.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </li>
+                        <li class="image-text">
+                            <a href="">
+                                <img src="img/car_move2.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </li>
+                        <li class="image-text">
+                            <a href="">
+                                <img src="img/car_move3.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </li>
+                        <li class="image-text">
+                            <a href="">
+                                <img src="img/car_move4.png" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </li>
+                        <li class="image-text">
+                            <a href="">
+                                <img src="img/car_move5.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </li>
+                        <li class="image-text">
+                            <a href="">
+                                <img src="img/car_move6.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-        </div> 
+        </div>
     </section>
 
     <!-- foot -->
@@ -299,7 +223,7 @@
                         <dt>
                             <h3>400-088-6888</h3>
                         </dt>
-                        <dd><a >24小时客服热线（仅收市话费）</a></dd>
+                        <dd><a class="tel_next">24小时客服热线（仅收市话费）</a></dd>
                         <dd><a href="" class="service"><span></span> 在线客服</a></dd>
                         <dd><a href="" class="service"><span></span>不良信息举报</a></dd>
                     </dl>
@@ -322,7 +246,7 @@
             </p>
             <p>
                 网络文化经营许可证：
-                <a href=""> 苏网文[2015] 1599-026号</a> 
+                <a href=""> 苏网文[2015] 1599-026号</a>
             </p>
             <ul class="clear">
                 <li><a href=""><img src="img/footer1.jpg" alt=""></a> </li>
@@ -332,10 +256,12 @@
             </ul>
         </footer>
     </div>
-    <script src="js/login.js"></script>
-    <script>    
-         //登陆弹窗调用
-         login.init('.pop-ups'); 
+
+    <script src="js/x_move.js"></script>
+    <script>
+        var haha = new move('.cite_out');
+        // console.log(haha.ele)
+        haha.x_move();
     </script>
 </body>
 
