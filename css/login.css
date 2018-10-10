@@ -137,7 +137,7 @@ section .login_in{
     top: 2px;
 }
 /* 登录按钮 */
-.pop-down>button{
+.pop-down button{
     color: white;
     outline: none;
     border: 0;

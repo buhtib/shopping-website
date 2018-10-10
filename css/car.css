@@ -255,11 +255,10 @@ section .cite_sweat_out{
 /* 包在里面的ul */
 section .cite_sweat{
     position: absolute;
-    width: 1300px;
+    width: 1550px;
     height: 236px;
     /* z-index: 5; */
 }
-
 
 /* 左右滚动按钮 */
 section .cite_out>span{

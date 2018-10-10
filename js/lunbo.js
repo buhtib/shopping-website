@@ -22,7 +22,7 @@ var lunbo = function(){
                     // 小圆点对应索引赋值给全局index
                     _this.index = $(this).index();
                     $(this).addClass('active').siblings().removeClass('active');
-                    _this.ele.children('li').eq(_this.index).fadeIn('fast').siblings().fadeOut(100);     
+                    _this.ele.children('li').eq(_this.index).fadeIn(500).siblings().fadeOut(100);     
                 })
                 // 移出后恢复自动播放
                 this.$list.children('li').mouseleave(function(){
@@ -39,7 +39,7 @@ var lunbo = function(){
                      // 同理，小圆点的添加class，active，，siblings()为相邻全部兄弟
                      _this.$list.children('li').eq(_this.index).addClass('active').siblings().removeClass('active');
                     // 对应第_this.index的图片淡入，其他图片全部淡出
-                    _this.ele.children('li').eq(_this.index).fadeIn('fast').siblings().fadeOut(100);     
+                    _this.ele.children('li').eq(_this.index).fadeIn(500).siblings().fadeOut(100);     
                 }, 3000);
             }
         }

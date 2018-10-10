@@ -2,51 +2,18 @@ var login = (function (){
     return {
         init:function(ele){
             if(typeof ele == 'string'){
-                ele=document.querySelector(ele);
+                this.ele=$(ele);
             }
-            // this.$top = ele.querySelector('h4');
-            // this.$off =  this.$top.firstElementChild;
-            this.event(ele);
+        // 手机号登陆
+           this.$name = this.ele.find('.pop-login>li:first>input');
+        //    密码输入
+           this.$pass = this.ele.find('.pop-login>li:last>input');
+        //    button
+           this.$button = this.ele.find('button');
+           this.event();
         },
-        event(ele){
-            // var _this=this;
-            // //点击登陆弹出弹窗
-            // $('.target-login').click(function(){
-            //     ele.parentNode.style.display = 'block';
-            // });
-
-            // var mar_left = parseInt(getAttr(ele,'margin-left'))
-            // //移动弹窗
-            // this.$top.onmousedown = function(e){
-            //     e= e || window.event;
-            //     var x = e.offsetX;
-            //     var y = e.offsetY;
-            //     document.onmousemove = function (e){
-            //         var max_x = window.innerWidth - ele.offsetWidth;
-            //         var max_y = window.innerHeight - ele.offsetHeight;
-            //         _this.left = e.clientX - x;
-            //         _this.top = e.clientY - y;
-            //         if (_this.left>max_x||_this.left<0){
-            //             _this.left=Math.max(0,_this.left)
-            //             _this.left=Math.min(_this.left,max_x)
-            //         }
-            //         if (_this.top <0){
-            //             _this.top =0;
-            //         }
-            //         ele.style.left = _this.left- mar_left+'px';
-            //         ele.style.top = _this.top+'px';
-            //     }        
-            // };
-            // //松开鼠标
-            // document.onmouseup = function (){
-            //     document.onmousemove = null;
-            // } ;
-            // //关闭弹窗
-            // this.$off.click = function () {
-            //     console.log(555)
-            //     ele.parentNode.style.display = 'none';
-            // };
-
+        event(){
+            var _this = this;
             // 切换登陆
             $('.s-login').click(function(){
                 $(this).css("color","red");
@@ -60,7 +27,67 @@ var login = (function (){
                 $('.pop-down').css("display","block");
                 $('.pop-down-right').css("display","none");
             })
-        }
+
+             reg = /^[a-zA-Z\d]{6,16}$/;
+            // 验证用户名输入
+            this.$name.change(function(){
+               _this.check(this)                
+            })
+            
+            // 验证密码输入
+            this.$pass.change(function(){
+                _this.check(this)              
+            })
+
+            //点击 button登陆
+            this.$button.click(function(){
+                // 当表单验证成功发送ajax
+                if(reg.test(_this.$name.val()) && reg.test(_this.$pass.val())){
+                    _this.getData()
+                }
+            })
+
+        },
+        // 获取数据，发送ajax
+        getData: function (){
+            var _this = this
+            var obj = {
+                // 数据发送
+                params : {
+                    name : _this.$name.val(),
+                    pass : _this.$pass.val()
+                },
+                success : function (data) {
+                    console.log(data)
+                    if(data.msg==200){
+                        location.href = 'start.html';
+                    }else if(data.msg==100){
+                        alert('用户存在但密码错误');
+                    }else if(data.msg==1000){
+                        alert('用户不存在');
+                        // location.href = 'register.html';
+                    }
+                }
+            }
+            sendAjax('php/login.php',obj);
+        },
+        // 验证输入值
+        check:function(ele){
+            // 转为jq
+            ele = $(ele)
+            // var reg = /^[a-zA-Z\d]{6,16}$/;
+              // 成功
+              if (reg.test(ele.val())) {
+                ele.parent().css("borderColor", "green");
+                // 失败
+            } else {
+                // 密码输入错误不提示文字，（比较dom对象）
+                if(ele[0] == this.$name[0]){
+                    ele.val('输入6-16位数字或字母')
+                }
+                ele.parent().css("borderColor", "red");
+            }
+        }     
     }
 
 }())
