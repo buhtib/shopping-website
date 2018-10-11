@@ -35,70 +35,91 @@ var reg = (function () {
             // 注册验证
             // 验证用户名输入
             this.$name.change(function () {
-               _this.check(this)
+                _this.check(this)
             })
-
             // 验证密码输入
             this.$pass.change(function () {
                 _this.check(this)
             })
-
-             // 验证密码输入
+            // 验证密码输入
             this.$again_pass.change(function () {
-                if(_this.$pass.val()==$(this).val()){
+                if (_this.$pass.val() == $(this).val()) {
                     _this.check(this)
-                }else{
+                } else {
                     $(this).parent().css("borderColor", "red");
                 }
             })
-
+            
             //点击 button登陆
             this.$button.click(function () {
-             // 当表单验证成功发送ajax
-               _this.checkAll();
+                // 当表单验证成功发送ajax
+                _this.checkAll();
             })
 
         },
+
         // 获取数据，发送ajax
         getData: function () {
             var _this = this
-            var obj = {
-                // 数据发送
+            $.ajax({
+                url: 'php/register.php',
                 type: 'post',
-                params: {
+                // 传过去json格式数据
+                contentType: 'application/json',
+                // 传回来json对象数据
+                dataType: 'json',
+                data: JSON.stringify({
                     name: _this.$name.val(),
                     pass: _this.$pass.val()
-                },
+                }),
                 success: function (data) {
                     if (data.msg == 200) {
                         location.href = 'login.html';
                     } else if (data.msg == 100) {
                         alert('用户已存在');
-                    } 
+                    }
+                },
+                // 异步
+                async: true,
+                // success之前显示图像
+                beforeSend: function () {
+                    ShowDiv();
+                },
+                // success之前隐藏图像
+                complete: function () {
+                    HiddenDiv()
                 }
+            });
+            //显示加载数据
+            function ShowDiv() {
+                $("#loading").show();
             }
-            sendAjax('php/register.php', obj);
+            //隐藏加载数据
+            function HiddenDiv() {
+                $("#loading").hide();
+            }
         },
+
         // 验证输入值
-        check:function(ele){
+        check: function (ele) {
             // 转为jq
             ele = $(ele)
-              // 成功
-              if (reg.test(ele.val())) {
+            // 成功
+            if (reg.test(ele.val())) {
                 ele.parent().css("borderColor", "green");
                 // 失败
             } else {
                 // 密码输入错误不提示文字
-                if(ele[0] == this.$name[0]){
+                if (ele[0] == this.$name[0]) {
                     ele.val('输入6-16位数字或字母')
                 }
                 ele.parent().css("borderColor", "red");
             }
         },
         // 验证全部表单再发送ajax
-        checkAll:function(){
+        checkAll: function () {
             var _this = this;
-             if (reg.test(_this.$name.val()) && reg.test(_this.$pass.val()) && reg.test(_this.$again_pass.val()) && (_this.$pass.val()==_this.$again_pass.val())) {
+            if (reg.test(_this.$name.val()) && reg.test(_this.$pass.val()) && reg.test(_this.$again_pass.val()) && (_this.$pass.val() == _this.$again_pass.val())) {
                 _this.getData()
             }
         }

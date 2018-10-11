@@ -2,6 +2,18 @@ body,html{
     background-color: #F1F1F1;
 }
 
+#loading{
+    display: none;
+     background :url(../img/reg_wait.gif) no-repeat center;
+     background-size: 100%;
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     left:0;
+     top: 0;
+     z-index: 1000;
+ }
+
 .header-in,.section-in,.footer-in{
     width: 960px;
     margin: 0 auto;

@@ -1169,6 +1169,7 @@ footer>ul>li a img {
 
 /* 置顶及锚点定位 */
 #go-top{
+    display: none;
     position: fixed;
     bottom: 100px;
     right: 10px;
@@ -1187,23 +1188,3 @@ footer>ul>li a img {
     background: url(../img/icon-common.png) no-repeat -122px 15px;
 }
 
-#jump{
-    padding-right: 12px;
-    position: fixed;
-    right: 5px;
-    bottom: 200px;
-}
-#jump li{
-   width: 100px;
-    border-bottom: 1px solid #C9151D;
-}
-#jump li a{ 
-    display: block;
-    color: #8A8A8A;
-    text-align: right;
-    line-height: 46px;
-    height: 46px;
-}
-#jump li a:hover{
-    color: #C9151D;
-}

@@ -33,12 +33,10 @@ var login = (function (){
             this.$name.change(function(){
                _this.check(this)                
             })
-            
             // 验证密码输入
             this.$pass.change(function(){
                 _this.check(this)              
             })
-
             //点击 button登陆
             this.$button.click(function(){
                 // 当表单验证成功发送ajax
@@ -51,26 +49,18 @@ var login = (function (){
         // 获取数据，发送ajax
         getData: function (){
             var _this = this
-            var obj = {
-                // 数据发送
-                params : {
-                    name : _this.$name.val(),
-                    pass : _this.$pass.val()
-                },
-                success : function (data) {
-                    console.log(data)
-                    if(data.msg==200){
-                        location.href = 'start.html';
-                    }else if(data.msg==100){
-                        alert('用户存在但密码错误');
-                    }else if(data.msg==1000){
-                        alert('用户不存在');
-                        // location.href = 'register.html';
-                    }
+            $.get('php/login.php',{name : _this.$name.val(),pass : _this.$pass.val(),t:Date.now()},function(data){
+                if(data.msg==200){
+                    location.href = 'start.html';
+                }else if(data.msg==100){
+                    alert('用户存在但密码错误');
+                }else if(data.msg==1000){
+                    alert('用户不存在');
+                    // location.href = 'register.html';
                 }
-            }
-            sendAjax('php/login.php',obj);
+            },'json')
         },
+
         // 验证输入值
         check:function(ele){
             // 转为jq
