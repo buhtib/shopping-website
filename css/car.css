@@ -360,6 +360,7 @@ section .image-text>a span:first-of-type{
 
 .foot .foot_ser li>a {
     font-size: 16px;
+    color: #3a3a3a;
 }
 
 .foot .foot_link {

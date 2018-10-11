@@ -7,4 +7,8 @@ $(document).ready(function () {
     $('#search_input').blur(function () {
         $(this).next().show();
     })
+
+    // 把滚动里面的img和a都设置禁止拖拽
+    $('.swiper-slide').children('a').attr("draggable","false");
+	$('.swiper-slide').children('a').find('img').attr("draggable","false");
 })
