@@ -1,0 +1,447 @@
+/* header */
+header{
+    /* position: relative; */
+}
+
+header>h1 {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+.hover a:hover,.down_img_text a>span:hover{
+    color: red!important;
+}
+
+/* <!-- header上的hover划出效果 --> */
+.header_down1_out,.header_down2_out,.header_down3_out,.header_down4_out,.header_down5_out,.header_down6_out{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #EAEAEA;
+    box-shadow: rgba(0, 0,0,0.3) 0 4px 20px;
+}
+/* 每个下滑的盒子 */
+.header_down1{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 上部分(nav) */
+.header_down1 .down_top{
+    width: 1200px;
+}
+.down_top>h4{
+    font-size: 12px;
+    margin-right: 15px;
+    margin-top: 10px;
+    float: left;
+}
+/* nav */
+.down_top .down_nav{
+    width: 1000px;
+    float: left;
+}
+.down_top .down_nav>li{
+    display: inline-block;
+    margin: 10px  15px;
+}
+.down_top .down_nav>li>a{
+    color: #707070;
+}
+
+/* 图片和文字li */
+.header_down1 .down_img_text{
+    margin-top: 20px;
+    padding-left: 23px;
+}
+.header_down1 .down_img_text>li{
+    float: left;
+    margin-right: 56px;
+}
+.header_down1 .down_img_text>li:last-child{
+    margin: 0;
+}
+.header_down1 .down_img_text>li>a{
+    display: block;
+    text-align: center;
+    width: 120px;
+    height: 206px;
+}
+.header_down1 .down_img_text>li>a>img{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.header_down1 .down_img_text>li>a>p{
+    line-height: 26px;
+    color: red;
+}
+
+
+/* <!-- 中间商品详情 --> */
+.product_out{
+    width: 100%;
+    padding: 15px 0 30px;
+    border-top: 5px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+}
+.product{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 导航 */
+.pro_nav{
+    margin-bottom: 10px;
+}
+.pro_nav>li{
+    float: left;
+    margin-right: 10px;
+    color: #707070;
+}
+.pro_nav>li:last-child{
+    color: #3a3a3a;
+    margin-left: 10px;
+}
+.pro_nav>li>a{
+    padding-right: 15px;
+    color: #707070;
+}
+
+/* 中间商品，*/
+.pro_section{
+    height: 581px;
+}
+/* 左边文字 */
+.pro_section .lable{
+    text-indent: 10px;
+    float: left;
+    width: 65px;
+    line-height: 30px;
+    margin-right: 20px;
+    text-align: justify;
+    text-align-last: justify;
+}
+.pro_section_left,.pro_section_right{
+    float: left;
+    height: 536px;
+}
+
+/* 右块 */
+.pro_section_right{
+    padding-left: 30px;
+    width: 700px;
+}
+/* name */
+.pro_section_right .pro_name{
+    font-size: 21px;
+    max-height: 84px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+/* intro */
+.pro_section_right .pro_intro{
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+/* price */
+.pro_section_right .price{
+    background: #f5f5f5;
+    padding-top: 14px;
+    padding-bottom: 3px;
+}
+.pro_section_right .price>ul>li{
+    margin: 4px 0;
+}
+.price>ul li span{
+    height: 30px;
+    line-height: 30px;
+}
+
+/* 红色大文字 */
+.price>ul li h4{
+    color: #ca141d;
+    font-size: 24px;
+    float: left;
+}
+/* 促销右边块 */
+.price .discount_r{
+    float: left;
+    width: 615px;
+}
+.price .discount_r>ul li{
+    height: 30px;
+    line-height: 30px;
+}
+.price .discount_r>ul .red_box{
+    margin-top: 5px;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    margin-right: 10px;
+    color: #ca141d;
+    text-align: center;
+    border: 1px solid #ca141d;
+}
+/* 服务和商品编码 */
+.pro_section_right .pro_ser{
+    padding-bottom:  5px;
+    margin-top: 20px;
+    border-bottom: 1px solid #DCDCDC;
+}
+.pro_ser .lable{
+    line-height: 18px;
+}
+.pro_ser>ul>li{
+    line-height: 18px;
+    height: 18px;
+}
+.pro_ser>ul>li:first-child{
+    margin-bottom: 10px;
+}
+.pro_ser>ul>li .ser_right{
+    float: left;
+}
+.pro_ser>ul>li .ser_right>li{
+    float: left;
+}
+.pro_ser>ul>li .ser_right>li>em{
+    width: 1px;
+    height: 12px;
+    background: #e6e6e6;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+    top: 3px;
+}
+
+/* 选择部分 */
+.pro_section_right .pro_select{
+   margin-top: 16px;
+}
+/* 每个小框的大盒子 */
+.pro_select>ul>li .sel_box{
+    float: left;
+    width: 605px;
+}
+.pro_select>ul>li .sel_box>li{
+    border-radius: 2px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    /* width: 105px; */
+    padding: 0 12px;
+    border: 1px solid #a4a4a4;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+}
+.pro_select>ul>li .sel_box>li:hover {
+    border-color: #717171;
+}
+/* 带图片的小框 */
+.pro_select .sel_color>ul>li{
+    width: 72px!important;
+    height: 38px;
+    text-align: right;
+}
+.pro_select .sel_color>ul>li>img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+/* 左边最后一行 文字 */
+.pro_select .sel_selected .lable{
+    line-height: 18px;
+    width: 85px;
+    margin-right: 10px;
+}
+/* 改变文字红色 */
+#red{
+    color: #ca141d;
+}
+
+/* 最后提交 按钮*/
+.pro_section_right .car_input>li{
+    float: left;
+    margin-right: 14px;
+    margin-top: 10px;
+}
+/* 计数input框 */
+.car_input .num>input{
+    outline: none;
+    margin-left: 10px;
+    width: 44px;
+    height: 45px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 44px;
+    border: 1px solid #D5D5D5;
+    border-right: 0;
+}
+/* 加减框 */
+.car_input .count{
+    float: right;
+}
+.car_input .count>p{
+    cursor: pointer;
+    text-align: center;
+    line-height: 22px;
+    color: #767676;
+    font-size: 20px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D5D5D5;
+}
+.car_input .count>p:first-child{
+    border-bottom: 0;
+}
+/* 右边按钮 */
+.pro_section_right .car_input .btn{
+    display: block;
+    background: #ca151d;
+    width: 172px;
+    height: 46px;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+}
+.pro_section_right .car_input .car_color{
+    background-color: #FB5F11;
+}
+.car_input .btn:hover{
+    opacity: 0.6;
+}
+
+
+
+/* 左块   大图450px，小图60px  , 放大倍率1.78*/
+.pro_section_left{
+    width: 450px;
+    position: relative;
+}
+/* 装中等盒子的框 */
+.pro_section_left .pro_img{
+    width: 450px;
+    height: 450px;
+    position: relative;
+}
+.pro_section_left .pro_img>img{
+    width: 100%;
+    height: 100%;
+}
+/* 放大镜 */
+.pro_img .bigger{
+    cursor: move;
+    display: none;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 200px;
+    background-color: rgba(255, 255,255,0.4);
+    border: 1px solid #999;
+}
+
+/* 装放大后图片的盒子 */
+.pro_section_left .pro_imgL{
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    left: 480px;
+    top: 0;
+    width: 380px;
+    height: 400px;
+    background: url(../img/pro_left_l1.jpg) no-repeat 0 0;
+    border: 2px solid #999;
+}
+
+
+/* 滚动长图 */
+.pro_section_left .pro_left_swiper{
+    width: 390px;
+    height: 68px;
+    margin-top: 22px;
+}
+/* 滚动div内块 */
+.swiper-wrapper .swiper-slide>a{
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    display: block;
+    padding: 3px;
+    border: 1px solid transparent;
+}
+.swiper-wrapper .swiper-slide:first-child>a{
+    border: 1px solid #ca151d;
+}
+
+.swiper-wrapper .swiper-slide>a>img{
+    width: 100%;
+    height: 100%;
+}
+/* swiper左右按钮 */
+.pro_section_left .left, .pro_section_left .right{
+    display: block;
+    background-image: none;
+    color: rgba(204,204,204,0.9);
+    border: 1px solid rgba(204,204,204,0.9)!important;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    top: 514px;
+    position: absolute;
+    z-index: 1000!important;
+	outline: none;
+}
+
+.pro_section_left .left:hover,.pro_section_left .right:hover{
+    background-color: rgba(204,204,204,0.3);
+}
+.pro_section_left .left{
+    left:0px;
+}
+.pro_section_left .right{
+   right: 0px;
+}
+/* 设置到最开始和最开头时,点击按钮不会点击到下方a标签 */
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{ 
+    pointer-events:auto; 
+    cursor: not-allowed;
+}
+
+
+/* 关联商品 */
+.related_out{
+    width: 100%;
+}
+.related{
+    width: 1200px;
+    margin: 0 auto;
+    height: 134px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+
+
+
+
+
+
+

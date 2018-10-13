@@ -3,7 +3,7 @@ body,html{
 }
 
 #loading{
-    display: none;
+     display: none;
      background :url(../img/reg_wait.gif) no-repeat center;
      background-size: 100%;
      width: 100vw;

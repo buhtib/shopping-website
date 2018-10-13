@@ -85,7 +85,7 @@ var reg = (function () {
                 beforeSend: function () {
                     ShowDiv();
                 },
-                // success之前隐藏图像
+                // success之后隐藏图像
                 complete: function () {
                     HiddenDiv()
                 }

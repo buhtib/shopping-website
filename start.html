@@ -16,7 +16,7 @@
 
 <body>
     <!-- 最顶部广告图片，带跳转链接 -->
-    <div class="ad" id="toptop">
+    <div class="ad" >
         <div class="ad-in">
             <a href="#">
                 <img src="img/ad.jpg" alt="">
@@ -25,7 +25,7 @@
     </div>
 
     <!-- 导航条 -->
-    <nav>
+    <nav >
         <!-- 导航条左侧导航 -->
         <ul class="nav_left clear">
             <li><a href="index.html">首页</a></li>
@@ -495,7 +495,7 @@
                 <!-- 8个 -->
                 <ul class="clear hover">
                     <li>
-                        <a href="">
+                        <a href="goods_details.html">
                             <img src="img/single1.jpg" alt="">
                             <i><img src="img/hot_pay.png" alt=""> </i>
                             <span>HUAWEI P20</span>
@@ -2183,16 +2183,18 @@
     </div>
 
     <!-- 置顶及锚点定位 -->
-    <a href="#toptop" id="go-top"><i></i> </a>
+    <a href="#" id="go-top"><i></i> </a>
    
     <script src="js/lunbo.js"></script>
     <script src="js/index.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/js/swiper.min.js"></script>
     <script>
+        index.init();
+        
         // 轮播
         lunbo().init('.banner_img');
         lunbo().init('.small_Carousel_img');
-
+        
         // swiper滚动图
         var mySwiper = new Swiper('.swiper-container', {
             // 一次滑动几个
