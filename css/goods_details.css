@@ -1,7 +1,6 @@
-/* header */
-header{
-    /* position: relative; */
-}
+/* body */
+/* body,html{
+} */
 
 header>h1 {
     margin-right: 0px;
@@ -355,7 +354,7 @@ header>h1 {
 
 /* 装放大后图片的盒子 */
 .pro_section_left .pro_imgL{
-    z-index: 1000;
+    z-index: 100;
     display: none;
     position: absolute;
     left: 480px;
@@ -433,10 +432,310 @@ header>h1 {
 .related{
     width: 1200px;
     margin: 0 auto;
-    height: 134px;
-    padding-bottom: 20px;
+    height: 119px;
+    padding:15px 0 20px;
     border-bottom: 1px solid #EAEAEA;
 }
+/* 标题 */
+.related>h3{
+    font-size: 18px;
+    width: 105px;
+    height: 27px;
+    line-height: 30px;
+    text-align: center;
+    margin:0 auto 15px;
+    position: relative;
+}
+.related>h3>em{
+    position: absolute;
+    width:6px;
+    height: 1px; 
+    background-color: black;
+    top: 14px;
+}
+.related>h3>em:first-child{
+    left: 0;
+}
+.related>h3>em:last-child{
+    right: 0;
+}
+/* 包裹按钮和ul的盒子 */
+.related_list{
+    height: 100px;
+}
+/* 按钮 */
+.related_list>.btn_left,.related_list>.btn_right{
+    height: 100px;
+    width: 50px;
+    line-height: 100px;
+    text-align: center;
+    float: left;
+    color: #E9E9E9;
+    cursor: not-allowed;
+}
+/* 商品列表 */
+.related_list .related_pro{
+    width: 1100px;
+    height: 100px;
+    float: left;
+}
+.related_list .related_pro>li{
+    float: left;
+    margin: 0 20px ;
+}
+.related_list .related_pro>li>a{
+    display: block;
+    width: 215px;
+    height: 64px;
+    padding: 13px 10px;
+}
+.related_list .related_pro>li>a>img{
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+.related_list .related_pro>li>a>p{
+    font-size: 14px;
+    color: #676767;
+    height: 30px;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+.related_list .related_pro>li>a>span{
+    font-size: 14px;    
+}
+
+
+
+/* section部分 */
+section{
+    width: 100%;
+   overflow: hidden;
+}
+section>.Jump_nav_out{
+    width: 100%;
+}
+/* 关联商品（锚点） */
+section .Jump_nav{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 36px 0 37px 0;
+    font-size: 0;
+}
+/* 滚动到某时刻时变化 */
+.Jump_nav_out .scroll_change{
+    background-color: white;
+    z-index: 1001;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    box-shadow: rgba(0,0,0,0.3) 0 1px 20px;
+    padding: 11px 0 12px 0;
+}
+
+.Jump_nav>li{
+    display: inline-block;
+
+}
+.Jump_nav>li>a{
+    display: block;
+    padding: 0 10px 6px;
+    margin: 0 25px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #A3A3A3;
+}
+/* 选中后文字的变化 */
+.Jump_nav>li>a.selected{
+    border-bottom: 2px solid #ca141d;
+    color: #ca141d;
+    cursor: default;
+}
+/* 加入购物车按钮 */
+.Jump_nav .Jump_nav_btn{
+   position: absolute;
+   right: 70px;
+   top: 10px;
+    margin-right: 20px;
+    background: #ca151d;
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.Jump_nav .Jump_nav_btn{
+    background-color: #ca141d;
+}
+.car_input .btn:hover{
+    opacity: 0.6;
+}
+
+
+/* 图片介绍 */
+section .pro_imgintro{
+    width: 100%;
+    height: 2000px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+}
+/* 收缩后高度改变 */
+section .pro_imgintro.show_hide{
+    overflow: visible;
+    height: 10693px;
+}
+.pro_imgintro>img{
+    width: 100%;
+}
+/* 上扩展按钮 */
+.pro_imgintro .pro_toggle_up{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: -webkit-radial-gradient(60% 50%, rgba(255,255,255,0.5) , rgba(255,255,255,0.9)); 
+}
+.pro_imgintro .pro_toggle_up>a{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    margin-left: -95px;
+    display: inline-block;
+    font-size: 14px;
+    padding: 11px 38px 11px 38px;
+    border: 1px solid #a4a4a4;
+    background: #fff;
+    border-radius: 2px;
+}
+/* 下收起按钮 */
+.pro_imgintro .pro_toggle_down{
+    display: none;
+    position: relative;
+    margin-top: 18px;
+    width: 100%;
+    height: 100px;
+}
+.pro_imgintro .pro_toggle_down>a{
+    text-align: center;
+    z-index: 1002;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-left: -100px;
+    left: 50%;
+    font-size: 22px;
+    color: #a4a4a4;
+    width: 200px;
+    height: 22px;
+    line-height: 22px;
+}
+/* 下收起按钮上方小图标 */
+.pro_imgintro .pro_toggle_down>i{
+    font-size: 18px;
+    color: #A2A2A2;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+/* 规格参数 */
+.params_out{
+    width: 100%;
+}
+/* 第一个参数加上标题 */
+.params_out .params_up{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 标题 */
+.params_up>h1{
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    position: relative;
+}
+.params_up>h1>em{
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    display: block;
+    width: 4px;
+    background-color: #ca141d;
+    height: 23px;
+}
+/* 通用 样式 规格 */
+.params_out .params_list{
+    font-size: 14px;
+    height: 270px;
+    padding: 39px 16px 34px 32px;
+}
+.params_out .params_list>li{
+    float: left;
+}
+/* 第一列 */
+.params_list .params_title{
+    font-size: 22px;
+    font-weight: 600;
+    width: 100px;
+}
+/* 第二列 */
+.params_list .params_name>ul>li{
+    margin-bottom: 9px;
+    width: 128px;
+    height: 21px;
+    margin-left: 20px;
+    position: relative;
+}
+/* 第一个规格额外原点样式 */
+.params_list .circle>ul>li::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: block;
+    border-radius: 3px;
+    background: #d8d8d8;
+    position: absolute;
+    top: 8px;
+    left: -16px;
+}
+/* 第三列 */
+.params_list .params_val>ul>li{
+    margin-bottom: 9px;
+    height: 21px;
+    margin-left: 20px;
+}
+
+
+/* 下面几个相同样式参数 （规格）*/
+.params_out .params_down{
+   width: 100%;
+   background: #f5f5f5;
+}
+.params_down .params_down_in{
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #d8d8d8;
+}
+.params_down .params_down_list{
+    height: auto;
+    padding: 37px 50px 35px 6px;
+}
+/* 换行了 */
+.params_down .params_down_list .Wrap{
+    height: 40px;
+}
+
 
 
 

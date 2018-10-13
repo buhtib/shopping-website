@@ -82,6 +82,7 @@ var goods = (function () {
                 _this.pro_num = $('.num>input').val();
                 _this.pro_num ++;
                 $('.num>input').val(_this.pro_num)
+                _this.jian()
             });
             // 减
             $('.count .jian').click(function() {
@@ -104,7 +105,35 @@ var goods = (function () {
                 _this.jian()
              });
            
+            //  关联商品nav点击事件
+             $('.Jump_nav').on('click','a',function() { 
+                $(this).parent().siblings().children('a').removeClass('selected')
+                 $(this).addClass('selected');
+             })
 
+            // 滚动到一定位置就改变关联商品nav的状态
+             $(window).scroll(function() {
+                _this.scroll();
+             })
+
+            //  console.log($('.toggle_down_target').offset().top)
+
+            //  图片展示  隐藏和收起功能
+             $('.pro_toggle_up').click(function() {
+                //  隐藏自己按钮
+                 $(this).hide();
+                //  展示下方图片
+                 $('.pro_imgintro').addClass('show_hide');
+                //  显示下方按钮
+                $('.pro_toggle_down').show()
+             })
+             $('.pro_toggle_down').click(function() {
+                 $(this).hide();
+                 $('.pro_imgintro').removeClass('show_hide');
+                $('.pro_toggle_up').show()
+                // 设置滚动高度
+                $(window).scrollTop($('.toggle_down_target').offset().top)
+             })
         },
 
          // 小图片  hover后切换大图片
@@ -136,6 +165,17 @@ var goods = (function () {
             }else{
                 $('.count .jian').css({'cursor':' pointer','color':'#767676'});
             }
+         },
+
+         // 滚动事件
+         scroll:function() {
+            if($(window).scrollTop() >= $('.Jump_nav_out').offset().top) {
+                $('.Jump_nav').addClass('scroll_change')
+                $('.Jump_nav_btn').show()
+             }else{
+                $('.Jump_nav_btn').hide()
+                $('.Jump_nav').removeClass('scroll_change')
+             }
          }
 
     }
