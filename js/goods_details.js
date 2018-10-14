@@ -9,33 +9,23 @@ var goods = (function () {
             var _this = this;
 
             // header  hover下滑效果
-            // $('header').on('mouseenter', 'li', function () {
-            //     // 找到对应索引让对应块下滑
-            //     index = $(this).index() + 1
-            //     str = '.header_down' + index + '_out'
-            //     $(str).siblings().hide();
-            //     $(str).slideDown('slow');
-            //     // 当滑块鼠标离开就滑上去
-            // })
+            $('header').on('mouseenter', 'li', function () {
+                // 找到对应索引让对应块下滑
+                index = $(this).index() + 1
+                str = '.header_down' + index + '_out'
+                $(str).siblings().hide();
+                $(str).slideDown('slow');
+                // 当滑块鼠标离开就滑上去
+            })
 
-            // $('header').on('mouseleave', 'li', function () {
-            //     $(str).slideUp('slow');
-            //     // return false;
-            // })
+            $('header').on('mouseleave', 'li', function () {
+                $(str).slideUp('slow');
+            })
 
 
-            // 改变 商品选择 的小框颜色
+            // 改变 商品选择 的小框颜色 和上方的字
             $('.box_hover').on('click','li',function () {
-                $(this).css('borderColor', '#ca151d').siblings().css('borderColor', '#a4a4a4');
-                // 选择颜色，配置 相应改变上方文字
-                if($(this).parent().attr('id')=='change_color'){
-                    $('#color').html(this.innerText)
-                }else if($(this).parent().attr('id')=='change_type'){
-                    var str = this.innerText;
-                    str = str.replace('|','-8250U  ');
-                    str = str.replace(/[|]/g,' ');
-                    $('#type').html(str)
-                }
+                _this.change_text_boder(this)
             });
 
             // 小图片  hover后切换大图片
@@ -163,7 +153,7 @@ var goods = (function () {
         },
 
          // 小图片  hover后切换大图片
-        hover_bigger:function(s_img){
+        hover_bigger:function(s_img) {
             var par = $(s_img).parent().parent()
             // 图片对应索引+1(改变大图)
             var index = par.index()+1
@@ -178,6 +168,22 @@ var goods = (function () {
             // 改变大图片
             $('.pro_imgL').css('backgroundImage',`url(img/pro_left_l${index}.jpg)`)
          },
+
+        //  选择对应文字框 改变边框颜色和 上方字的替换
+        change_text_boder:function(change) {
+            $(change).addClass('bor_red').siblings().removeClass('bor_red');
+            // 选择颜色，配置 相应改变上方文字
+            if($(change).parent().attr('id')=='change_color'){
+                $('#color').html(change.innerText);
+               $('.pro_nav_name').html($('.pro_name')[0].innerText) 
+            }else if($(change).parent().attr('id')=='change_type'){
+                var str = change.innerText;
+                str = str.replace('|','-8250U  ');
+                str = str.replace(/[|]/g,' ');
+                $('#type').html(str);
+                $('.pro_nav_name').html($('.pro_name')[0].innerText) 
+            }
+        },
 
          // 限制计数框为1
         jian:function() {

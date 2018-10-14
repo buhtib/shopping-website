@@ -225,6 +225,10 @@ header>h1 {
 .pro_section_right .pro_select{
    margin-top: 16px;
 }
+/* 点击事件改变框的颜色 */
+.pro_select>ul>li .box_hover .bor_red{
+    border-color: #ca151d;
+}
 /* 每个小框的大盒子 */
 .pro_select>ul>li .sel_box{
     float: left;
@@ -235,15 +239,15 @@ header>h1 {
     display: inline-block;
     height: 30px;
     line-height: 30px;
-    /* width: 105px; */
     padding: 0 12px;
     border: 1px solid #a4a4a4;
     margin: 0 10px 10px 0;
     cursor: pointer;
 }
-.pro_select>ul>li .sel_box>li:hover {
+/* 选择框hover效果 */
+/* .pro_select>ul>li .sel_box>li:hover {
     border-color: #717171;
-}
+} */
 /* 带图片的小框 */
 .pro_select .sel_color>ul>li{
     width: 72px!important;
