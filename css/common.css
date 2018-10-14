@@ -506,6 +506,7 @@ header .search .input_on span:hover{
         right: 10px;
         width: 40px;
         height: 40px;
+        z-index: 1000000;
         border-radius: 20px;
         font-size: 0;
         background-color: rgba(0,0,0,0.7);

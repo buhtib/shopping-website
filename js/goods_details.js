@@ -107,8 +107,7 @@ var goods = (function () {
            
             //  关联商品nav点击事件
              $('.Jump_nav').on('click','a',function() { 
-                $(this).parent().siblings().children('a').removeClass('selected')
-                 $(this).addClass('selected');
+                _this.fixed_nav(this)
              })
 
             // 滚动到一定位置就改变关联商品nav的状态
@@ -116,24 +115,42 @@ var goods = (function () {
                 _this.scroll();
              })
 
-            //  console.log($('.toggle_down_target').offset().top)
 
             //  图片展示  隐藏和收起功能
-             $('.pro_toggle_up').click(function() {
+             $('.pro_imgintro .pro_toggle_up').click(function() {
                 //  隐藏自己按钮
                  $(this).hide();
                 //  展示下方图片
                  $('.pro_imgintro').addClass('show_hide');
                 //  显示下方按钮
-                $('.pro_toggle_down').show()
+                $('.pro_imgintro .pro_toggle_down').show()
              })
-             $('.pro_toggle_down').click(function() {
+             $('.pro_imgintro .pro_toggle_down').click(function() {
                  $(this).hide();
                  $('.pro_imgintro').removeClass('show_hide');
-                $('.pro_toggle_up').show()
+                $('.pro_imgintro .pro_toggle_up').show()
                 // 设置滚动高度
                 $(window).scrollTop($('.toggle_down_target').offset().top)
              })
+
+            //  规格展示  隐藏和收起功能
+             $('.params_out .pro_toggle_up').click(function() {
+                //  隐藏自己按钮
+                 $(this).hide();
+                //  展示下方图片
+                 $('.params_out').addClass('show_hide');
+                //  显示下方按钮
+                $('.params_out .pro_toggle_down').show()
+             })
+             $('.params_out .pro_toggle_down').click(function() {
+                 $(this).hide();
+                 $('.params_out').removeClass('show_hide');
+                $('.params_out .pro_toggle_up').show()
+                // 设置滚动高度
+                $(window).scrollTop($('.params_target').offset().top)
+             })
+
+             console.log($('.params_out').offset().top,$('.package').offset().top)
         },
 
          // 小图片  hover后切换大图片
@@ -167,11 +184,30 @@ var goods = (function () {
             }
          },
 
+        //  关联商品nav状态变化函数
+        fixed_nav:function(fixed_nav) {
+            $(fixed_nav).parent().siblings().children('a').removeClass('selected')
+            $(fixed_nav).addClass('selected');
+        },
+
          // 滚动事件
          scroll:function() {
+             var _this = this;
             if($(window).scrollTop() >= $('.Jump_nav_out').offset().top) {
                 $('.Jump_nav').addClass('scroll_change')
                 $('.Jump_nav_btn').show()
+                
+                // 当滚动高度到达指定块，执行顶部 nav 状态变化
+                // 第1个变化
+                if($(window).scrollTop() <= ($('.params_out').offset().top - 150)){
+                    _this.fixed_nav($('#Jump_nav_a1')[0])
+                // 第2个变化
+                }else if($(window).scrollTop() <= $('.package').offset().top - 150){
+                    _this.fixed_nav($('#Jump_nav_a2')[0])
+                // 第3个变化
+                }else if($(window).scrollTop() <= $('.discuss').offset().top){
+                    _this.fixed_nav($('#Jump_nav_a3')[0])
+                }
              }else{
                 $('.Jump_nav_btn').hide()
                 $('.Jump_nav').removeClass('scroll_change')

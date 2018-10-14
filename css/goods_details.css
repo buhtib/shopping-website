@@ -596,14 +596,14 @@ section .pro_imgintro.show_hide{
     width: 100%;
 }
 /* 上扩展按钮 */
-.pro_imgintro .pro_toggle_up{
+section .pro_toggle_up{
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 300px;
     background: -webkit-radial-gradient(60% 50%, rgba(255,255,255,0.5) , rgba(255,255,255,0.9)); 
 }
-.pro_imgintro .pro_toggle_up>a{
+section .pro_toggle_up>a{
     position: absolute;
     left: 50%;
     bottom: 0px;
@@ -616,14 +616,14 @@ section .pro_imgintro.show_hide{
     border-radius: 2px;
 }
 /* 下收起按钮 */
-.pro_imgintro .pro_toggle_down{
+section .pro_toggle_down{
     display: none;
     position: relative;
     margin-top: 18px;
     width: 100%;
     height: 100px;
 }
-.pro_imgintro .pro_toggle_down>a{
+section .pro_toggle_down>a{
     text-align: center;
     z-index: 1002;
     display: block;
@@ -638,7 +638,7 @@ section .pro_imgintro.show_hide{
     line-height: 22px;
 }
 /* 下收起按钮上方小图标 */
-.pro_imgintro .pro_toggle_down>i{
+section .pro_toggle_down>i{
     font-size: 18px;
     color: #A2A2A2;
     display: block;
@@ -649,8 +649,17 @@ section .pro_imgintro.show_hide{
 
 
 /* 规格参数 */
-.params_out{
+section .params_out{
     width: 100%;
+    position: relative;
+    z-index: 20;
+    overflow:hidden;
+    height: 850px;
+}
+/* 收缩后高度改变 */
+section .params_out.show_hide{
+    overflow: visible;
+    height: 2630px;
 }
 /* 第一个参数加上标题 */
 .params_out .params_up{
@@ -658,14 +667,14 @@ section .pro_imgintro.show_hide{
     margin: 0 auto;
 }
 /* 标题 */
-.params_up>h1{
+section h1{
     font-size: 18px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 14px;
     padding-left: 14px;
     position: relative;
 }
-.params_up>h1>em{
+section h1>em{
     position: absolute;
     top: 1px;
     left: 0px;
@@ -718,6 +727,7 @@ section .pro_imgintro.show_hide{
 
 
 /* 下面几个相同样式参数 （规格）*/
+
 .params_out .params_down{
    width: 100%;
    background: #f5f5f5;
@@ -725,11 +735,14 @@ section .pro_imgintro.show_hide{
 .params_down .params_down_in{
     width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid #d8d8d8;
 }
 .params_down .params_down_list{
+    border-bottom: 1px solid #D7D7D7;
     height: auto;
     padding: 37px 50px 35px 6px;
+}
+.params_down .params_down__last_list{
+    border: 0;
 }
 /* 换行了 */
 .params_down .params_down_list .Wrap{
@@ -737,9 +750,49 @@ section .pro_imgintro.show_hide{
 }
 
 
-
-
-
+/* 包装与售后 */
+section .package{
+    width: 1200px;
+    margin: 60px auto;
+}
+/* 通用 ul li 样式 */
+.package  .package_list{
+    padding: 38px 30px 40px 130px;
+}
+.package  .package_list>li{
+    display: inline-block;
+    font-size: 14px;
+    position: relative;
+    color: #3a3a3a;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    width: 223px;
+}
+/* 圆点 */
+.package  .package_list>li:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: block;
+    border-radius: 3px;
+    background: #d8d8d8;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+/* 服务的li */
+.package_ser .package_ser_list>li{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 12px;
+}
+/* 服务的p */
+.package_ser>p{
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 22px;
+}
 
 
 

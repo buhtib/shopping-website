@@ -668,17 +668,17 @@
         <!-- 关联商品 锚点 -->
         <div class="Jump_nav_out">
             <ul class="Jump_nav">
-                <li><a href="javascript:void(0)" class="selected">商品详情 </a></li>
-                <li><a href="javascript:void(0)"> 规格参数 </a></li>
-                <li><a href="javascript:void(0)">包装与售后</a></li>
-                <li><a href="javascript:void(0)">用户评价(4426)</a></li>
+                <li><a href="#pro_imgintro" class="selected" id="Jump_nav_a1">商品详情 </a></li>
+                <li><a href="#params" id="Jump_nav_a2"> 规格参数 </a></li>
+                <li><a href="#package" id="Jump_nav_a3">包装与售后</a></li>
+                <li><a href="#discuss" id="Jump_nav_a4">用户评价(4426)</a></li>
                 <a href="car.html" class="Jump_nav_btn">加入购物车</a>
             </ul>
 
         </div>
 
         <!-- 图片介绍 -->
-        <div class="pro_imgintro">
+        <div class="pro_imgintro" id="pro_imgintro">
             <img src="img/pro_img1.jpg" alt="">
             <img src="img/pro_img2.jpg" alt="">
             <img src="img/pro_img3.jpg" alt="">
@@ -695,7 +695,7 @@
             <img src="img/pro_img14.jpg" alt="">
             <img src="img/pro_img15.jpg" alt="">
             <img src="img/pro_img16.jpg" alt="">
-
+            <!-- 收缩展示按钮 -->
             <div class="pro_toggle_up">
                 <a href="javascript:void(0)">查看全部产品详情</a>
             </div>
@@ -706,10 +706,10 @@
         </div>
         
         <!-- 规格参数 -->
-        <div class="params_out">
+        <div class="params_out" id="params">
             <!-- 第1个规格列表 -->
             <div class="params_up">
-                <h1><em></em> 规格参数</h1>
+                <h1 class="params_target"><em></em> 规格参数</h1>
 
                 <ul class="params_list clear">
                     <li class="params_title">
@@ -800,278 +800,217 @@
                         </li>
                         <li class="params_name params_down_name">
                             <ul>
-                                <li>品牌</li>
-                                <li>型号</li>
-                                <li>传播名</li>
-                                <li>配置</li>
-                                <li>外观设计</li>
-                                <li>类别</li>
-                                <li>操作系统</li>
-                                <li>CPU型号</li>
-                                <li>CPU核数</li>
-                                <li>CPU主频</li>
-                                <li>GPU</li>
-                                <li>上市时间</li>
-                                <li>显卡</li>
-                                <li>键盘类型</li>
-                                <li class="Wrap">显存容量（独立显卡）</li>
-                                <li>显存类型</li>
+                                <li>屏幕尺寸</li>
+                                <li>屏幕类型</li>
+                                <li>屏幕比例</li>
+                                <li>分辨率</li>
+                                <li>可视角度</li>
+                                <li>对比度</li>
+                                <li>亮度</li>
                             </ul>
                         </li>
                         <li class="params_val">
                             <ul>
-                                <li>荣耀（Honor）</li>
-                                <li>VLT-W60</li>
-                                <li>荣耀MagicBook</li>
-                                <li>I7+8GB+256GB</li>
-                                <li>铝合金</li>
-                                <li>笔记本电脑</li>
-                                <li>Windows 10 家庭版 64位</li>
-                                <li>第八代智能英特尔® 酷睿™ i7-8550U处理器</li>
-                                <li>四核</li>
-                                <li>1.8-4.0GHz</li>
-                                <li>Intel® UHD Graphics 620/NVIDIA® GeForce® MX150</li>
-                                <li>2018年4月</li>
-                                <li>英伟达 GeForce MX150</li>
-                                <li>背光键盘, 防泼溅键盘, 孤岛式巧克力键盘, 全尺寸键盘</li>
-                                <li class="Wrap">2GB</li>
-                                <li>GDDR5（独立显卡）</li>
+                                <li>14英寸</li>
+                                <li>IPS屏，雾面屏</li>
+                                <li>16：9</li>
+                                <li>1920x1080（FHD）</li>
+                                <li>178度宽广视角</li>
+                                <li>800：1</li>
+                                <li>250尼特</li>
                             </ul>
                         </li>
                 </ul>
                 <!-- 第4个规格列表 -->
                  <ul class="params_list clear params_down_list">
                         <li class="params_title">
-                            <span>主体</span>
+                            <span>存储</span>
                         </li>
                         <li class="params_name params_down_name">
                             <ul>
-                                <li>品牌</li>
-                                <li>型号</li>
-                                <li>传播名</li>
-                                <li>配置</li>
-                                <li>外观设计</li>
-                                <li>类别</li>
-                                <li>操作系统</li>
-                                <li>CPU型号</li>
-                                <li>CPU核数</li>
-                                <li>CPU主频</li>
-                                <li>GPU</li>
-                                <li>上市时间</li>
-                                <li>显卡</li>
-                                <li>键盘类型</li>
-                                <li class="Wrap">显存容量（独立显卡）</li>
-                                <li>显存类型</li>
+                                <li>运行内存</li>
+                                <li>内存类型</li>
+                                <li>存储容量</li>
+                                <li>硬盘类型</li>
+                                <li>硬盘接口类型</li>
+                                <li>光驱</li>
                             </ul>
                         </li>
                         <li class="params_val">
                             <ul>
-                                <li>荣耀（Honor）</li>
-                                <li>VLT-W60</li>
-                                <li>荣耀MagicBook</li>
-                                <li>I7+8GB+256GB</li>
-                                <li>铝合金</li>
-                                <li>笔记本电脑</li>
-                                <li>Windows 10 家庭版 64位</li>
-                                <li>第八代智能英特尔® 酷睿™ i7-8550U处理器</li>
-                                <li>四核</li>
-                                <li>1.8-4.0GHz</li>
-                                <li>Intel® UHD Graphics 620/NVIDIA® GeForce® MX150</li>
-                                <li>2018年4月</li>
-                                <li>英伟达 GeForce MX150</li>
-                                <li>背光键盘, 防泼溅键盘, 孤岛式巧克力键盘, 全尺寸键盘</li>
-                                <li class="Wrap">2GB</li>
-                                <li>GDDR5（独立显卡）</li>
+                                <li>8GB</li>
+                                <li>LPDDR3 2133MHz</li>
+                                <li>256GB</li>
+                                <li>SSD固态硬盘</li>
+                                <li>SATA</li>
+                                <li>无</li>
                             </ul>
                         </li>
                 </ul>
                 <!-- 第5个规格列表 -->
                  <ul class="params_list clear params_down_list">
                         <li class="params_title">
-                            <span>主体</span>
+                            <span>传感器</span>
                         </li>
                         <li class="params_name params_down_name">
                             <ul>
-                                <li>品牌</li>
-                                <li>型号</li>
-                                <li>传播名</li>
-                                <li>配置</li>
-                                <li>外观设计</li>
-                                <li>类别</li>
-                                <li>操作系统</li>
-                                <li>CPU型号</li>
-                                <li>CPU核数</li>
-                                <li>CPU主频</li>
-                                <li>GPU</li>
-                                <li>上市时间</li>
-                                <li>显卡</li>
-                                <li>键盘类型</li>
-                                <li class="Wrap">显存容量（独立显卡）</li>
-                                <li>显存类型</li>
+                                <li>指纹传感器</li>
+                                <li>霍尔传感器</li>
                             </ul>
                         </li>
                         <li class="params_val">
                             <ul>
-                                <li>荣耀（Honor）</li>
-                                <li>VLT-W60</li>
-                                <li>荣耀MagicBook</li>
-                                <li>I7+8GB+256GB</li>
-                                <li>铝合金</li>
-                                <li>笔记本电脑</li>
-                                <li>Windows 10 家庭版 64位</li>
-                                <li>第八代智能英特尔® 酷睿™ i7-8550U处理器</li>
-                                <li>四核</li>
-                                <li>1.8-4.0GHz</li>
-                                <li>Intel® UHD Graphics 620/NVIDIA® GeForce® MX150</li>
-                                <li>2018年4月</li>
-                                <li>英伟达 GeForce MX150</li>
-                                <li>背光键盘, 防泼溅键盘, 孤岛式巧克力键盘, 全尺寸键盘</li>
-                                <li class="Wrap">2GB</li>
-                                <li>GDDR5（独立显卡）</li>
+                                <li>支持</li>
+                                <li>支持</li>
                             </ul>
                         </li>
                 </ul>
                 <!-- 第6个规格列表 -->
                  <ul class="params_list clear params_down_list">
                         <li class="params_title">
-                            <span>主体</span>
+                            <span>摄像功能</span>
                         </li>
                         <li class="params_name params_down_name">
                             <ul>
-                                <li>品牌</li>
-                                <li>型号</li>
-                                <li>传播名</li>
-                                <li>配置</li>
-                                <li>外观设计</li>
-                                <li>类别</li>
-                                <li>操作系统</li>
-                                <li>CPU型号</li>
-                                <li>CPU核数</li>
-                                <li>CPU主频</li>
-                                <li>GPU</li>
-                                <li>上市时间</li>
-                                <li>显卡</li>
-                                <li>键盘类型</li>
-                                <li class="Wrap">显存容量（独立显卡）</li>
-                                <li>显存类型</li>
+                                <li>摄像头</li>
                             </ul>
                         </li>
                         <li class="params_val">
                             <ul>
-                                <li>荣耀（Honor）</li>
-                                <li>VLT-W60</li>
-                                <li>荣耀MagicBook</li>
-                                <li>I7+8GB+256GB</li>
-                                <li>铝合金</li>
-                                <li>笔记本电脑</li>
-                                <li>Windows 10 家庭版 64位</li>
-                                <li>第八代智能英特尔® 酷睿™ i7-8550U处理器</li>
-                                <li>四核</li>
-                                <li>1.8-4.0GHz</li>
-                                <li>Intel® UHD Graphics 620/NVIDIA® GeForce® MX150</li>
-                                <li>2018年4月</li>
-                                <li>英伟达 GeForce MX150</li>
-                                <li>背光键盘, 防泼溅键盘, 孤岛式巧克力键盘, 全尺寸键盘</li>
-                                <li class="Wrap">2GB</li>
-                                <li>GDDR5（独立显卡）</li>
+                                <li>100万像素</li>
                             </ul>
                         </li>
                 </ul>
                 <!-- 第7个规格列表 -->
                  <ul class="params_list clear params_down_list">
                         <li class="params_title">
-                            <span>主体</span>
+                            <span>个人助理</span>
                         </li>
                         <li class="params_name params_down_name">
                             <ul>
-                                <li>品牌</li>
-                                <li>型号</li>
-                                <li>传播名</li>
-                                <li>配置</li>
-                                <li>外观设计</li>
-                                <li>类别</li>
-                                <li>操作系统</li>
-                                <li>CPU型号</li>
-                                <li>CPU核数</li>
-                                <li>CPU主频</li>
-                                <li>GPU</li>
-                                <li>上市时间</li>
-                                <li>显卡</li>
-                                <li>键盘类型</li>
-                                <li class="Wrap">显存容量（独立显卡）</li>
-                                <li>显存类型</li>
+                                <li>Office</li>
+                                <li>浏览器</li>
+                                <li>内置软件</li>
                             </ul>
                         </li>
                         <li class="params_val">
                             <ul>
-                                <li>荣耀（Honor）</li>
-                                <li>VLT-W60</li>
-                                <li>荣耀MagicBook</li>
-                                <li>I7+8GB+256GB</li>
-                                <li>铝合金</li>
-                                <li>笔记本电脑</li>
-                                <li>Windows 10 家庭版 64位</li>
-                                <li>第八代智能英特尔® 酷睿™ i7-8550U处理器</li>
-                                <li>四核</li>
-                                <li>1.8-4.0GHz</li>
-                                <li>Intel® UHD Graphics 620/NVIDIA® GeForce® MX150</li>
-                                <li>2018年4月</li>
-                                <li>英伟达 GeForce MX150</li>
-                                <li>背光键盘, 防泼溅键盘, 孤岛式巧克力键盘, 全尺寸键盘</li>
-                                <li class="Wrap">2GB</li>
-                                <li>GDDR5（独立显卡）</li>
+                                <li>Office 家庭和学生版2016</li>
+                                <li>Microsoft Edge</li>
+                                <li>华为电脑管家，显示管理（护眼模式）</li>
                             </ul>
                         </li>
                 </ul>
                 <!-- 第8个规格列表 -->
                  <ul class="params_list clear params_down_list">
                         <li class="params_title">
-                            <span>主体</span>
+                            <span>其他</span>
                         </li>
                         <li class="params_name params_down_name">
                             <ul>
-                                <li>品牌</li>
-                                <li>型号</li>
-                                <li>传播名</li>
-                                <li>配置</li>
-                                <li>外观设计</li>
-                                <li>类别</li>
-                                <li>操作系统</li>
-                                <li>CPU型号</li>
-                                <li>CPU核数</li>
-                                <li>CPU主频</li>
-                                <li>GPU</li>
-                                <li>上市时间</li>
-                                <li>显卡</li>
-                                <li>键盘类型</li>
-                                <li class="Wrap">显存容量（独立显卡）</li>
-                                <li>显存类型</li>
+                                <li>电池类型</li>
+                                <li>电池容量</li>
+                                <li>理论使用时间</li>
+                                <li>充电器</li>
+                                <li>充电时间</li>
+                                <li>耳机接口</li>
+                                <li>扬声器</li>
+                                <li>麦克风</li>
+                                <li>音效</li>
+                                <li>电源适配器</li>
+                                <li>USB接口</li>
+                                <li>其他接口</li>
+                                <li>软件名称</li>
+                                <li>机身重量</li>
+                                <li>机身尺寸</li>
                             </ul>
                         </li>
                         <li class="params_val">
                             <ul>
-                                <li>荣耀（Honor）</li>
-                                <li>VLT-W60</li>
-                                <li>荣耀MagicBook</li>
-                                <li>I7+8GB+256GB</li>
-                                <li>铝合金</li>
-                                <li>笔记本电脑</li>
-                                <li>Windows 10 家庭版 64位</li>
-                                <li>第八代智能英特尔® 酷睿™ i7-8550U处理器</li>
-                                <li>四核</li>
-                                <li>1.8-4.0GHz</li>
-                                <li>Intel® UHD Graphics 620/NVIDIA® GeForce® MX150</li>
-                                <li>2018年4月</li>
-                                <li>英伟达 GeForce MX150</li>
-                                <li>背光键盘, 防泼溅键盘, 孤岛式巧克力键盘, 全尺寸键盘</li>
-                                <li class="Wrap">2GB</li>
-                                <li>GDDR5（独立显卡）</li>
+                                <li>锂聚合物</li>
+                                <li>57.4Wh</li>
+                                <li>约12小时（实验室播放视频情况下，不同情况下的续航时间会有差异）</li>
+                                <li>HUAWEI USB-C 电源适配器65W</li>
+                                <li>1小时充电不小于70%，充满不超过2.5小时（标配适配器及标准电压下，关机情况使用）</li>
+                                <li>3.5mm耳机、麦克风二合一接口</li>
+                                <li>4个扬声器</li>
+                                <li>内置数字麦克风2个</li>
+                                <li>Dolby Atmos® Sound System音效技术</li>
+                                <li>HUAWEI USB-C 电源适配器65W</li>
+                                <li>USB Type-C接口 x 1，USB3.0（Type A）接口 x 1，USB2.0（Type A）接口 x 1</li>
+                                <li>HDMl标准接口</li>
+                                <li>华为终端电脑性能检测管理软件V8.0</li>
+                                <li>约1.47Kg（备注：受产品配置和制造工艺影响，实际机身重量或有差异，请以实物为准）</li>
+                                <li>323mm*221mm*15.8mm（备注：受产品配置和制造工艺影响，实际机身尺寸或有差异，请以实物为准）</li>
                             </ul>
                         </li>
                 </ul>
+                 <!-- 第9个规格列表 -->
+                 <ul class="params_list clear params_down_list params_down__last_list">
+                    <li class="params_title">
+                        <span>商品编码</span>
+                    </li>
+                    <li class="params_name params_down_name">
+                        <ul>
+                            <li>2801010002403</li>
+                        </ul>
+                    </li>
+                    <div class="pro_toggle_down params_toggle_down">
+                        <i class="shop hw-shangjiantou"></i>
+                    <a href="javascript:void(0)"> 收起参数详情</a>
+                </div>
+            </ul>
             </div>
         </div>
+
+        <!-- 收缩展示按钮 -->
+        <div class="pro_toggle_up params_toggle_up">
+            <a href="javascript:void(0)">查看全部参数</a>
+        </div>
     </div>
+
+
+    <!-- 包装与售后 -->
+        <div class="package" id="package">
+            <!-- 包装 -->
+
+            <div class="package_pack">
+                <h1 class="params_target"><em></em> 包装</h1>
+                <ul class="package_list">
+                    <li>主机X 1</li>
+                    <li>适配器X 1</li>
+                    <li>数据线X 1</li>
+                    <li>快速入门X 1</li>
+                    <li>保修卡X 1</li>
+                </ul>                
+            </div>
+
+            <!-- 售后服务 -->
+            <div class="package_ser">
+                <h1 class="params_target"><em></em> 售后服务</h1>
+                <ul class="package_list package_ser_list">
+                    <li>本产品全国联保，享受三包服务，质保期为：两年质保</li>
+                    <li>如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7天内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</li>
+                    <li>售后服务电话：400-830-8300</li>
+                    <li>
+                        华为消费者BG官网：
+                        <a href="javascript:void(0)">https://consumer.huawei.com/cn/</a> 
+                    </li>
+                </ul>    
+                <p>
+                        *因可能存在系统缓存，页面更新导致价格变动异常等不确定性情况出现，如您发现活动商品标价或促销信息有异常，请您立即联系我们，以便我们及时补正。<br>
+                        *以上页面中的产品图片及屏幕内容仅作示意，实物产品效果（包括但不限于外观、颜色、尺寸）和屏幕显示内容（包括但不限于背景、UI、配图）可能略有差异，请以实物为准。<br>
+                        *以上页面中的数据为理论值，均来自华为内部实验室，于特定测试环境下所得（请见各项具体说明），实际使用中可能因产品个体差异、软件版本、使用条件和环境因素不同略有不同，请以实际使用的情况为准。<br>
+                        *为提供尽可能准确的产品信息、规格参数、产品特性，华为或荣耀可能实时调整和修订以上页面中的文字表述、图片效果等内容，以求与实际产品性能、规格、指数、零部件等信息相匹配，由于产品批次和生产供应因素实时变化，如遇确有进行上述修改和调整必要的情形，恕不专门通知。
+                </p>  
+            </div>
+        </div>
+
+        <!-- 用户评价 -->
+        <div class="discuss" id="discuss">
+
+        </div>
+
     </section>
 
 
@@ -1088,7 +1027,7 @@
     <script>
          // 引入相同头尾
         $('.common_nav').load("common.html nav");
-        // 回调防止找不到dom
+        // 防止回调找不到dom
         $('.common_header').load("common.html header",function(){
             goods.init();
         });
