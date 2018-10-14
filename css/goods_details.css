@@ -361,7 +361,7 @@ header>h1 {
     top: 0;
     width: 380px;
     height: 400px;
-    background: url(../img/pro_left_l1.jpg) no-repeat 0 0;
+    background:white url(../img/pro_left_l1.jpg) no-repeat 0 0;
     border: 2px solid #999;
 }
 

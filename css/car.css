@@ -156,6 +156,14 @@ section {
     height: 926px;
     padding-top: 10px;
 }
+/* 加入商品  高度自动排布 */
+.section-in.sec_addto_car{
+    height: auto;
+}
+/* 物品加入购物车后的变化  块 先默认隐藏，防止*/
+.section-in .addToCar_section{
+    display: none;
+}
 
 /* 提示登陆 */
 .section-in .tip-login {
@@ -191,7 +199,7 @@ section {
     border-radius: 2px;
 }
 
-/* car-section */
+/* car-section 购物车详情 */
 .section-in .car-section {
     height: 356px;
     background-color: #fff;
@@ -515,4 +523,193 @@ footer>ul>li a {
 footer>ul>li a img {
     width: 100%;
     height: 100%;
+}
+
+
+
+
+.section-in .product,.section-in .product_remove_title,.section-in .product_remove{
+    margin: 0 auto;
+    width: 1200px;
+}
+/* 加入的商品 */
+.section-in .product>.product_list{
+    background-color: white;
+    line-height: 40px;
+    padding-left: 40px;
+    color: #a4a4a4;
+}
+ .product>.product_list>li{
+    float: left;
+}
+
+/* 选择框 */
+ .product>.product_list .check_box{
+    width: 150px;
+}
+.product>.product_list .check_box>p{
+    margin-bottom: -3px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border:1px solid #C5C5C5;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.product_list .check_box i{
+    color: #CB0D16;
+    position: absolute;
+    left: -3px;
+    top: -15px;
+    font-size: 20px;
+}
+
+/* 商品 */
+.product_list .product_name{
+    width: 450px;
+}
+/* 单价 */
+.product_list .price{
+    text-align: center;
+    width: 100px;
+    margin-left: 30px;
+}
+
+
+/* 物品详细列表 */
+.product .product_list.product_list_detailed{
+    margin-top: 10px;
+    padding-top: 20px;
+    color: #3a3a3a;
+    height:120px;
+    line-height:normal;
+    font-size: 14px;
+}
+/* 物品详细列表左边的框 */
+.product_list_detailed .check_box p{
+    float: left;
+    margin-top: 43px;
+}
+.product_list_detailed .check_box p>i{
+    left: -4px;
+    top: -6px;
+}
+/* 带图片的块 */
+.check_box .product_img img{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+/* 计数input框 */
+.product_list_detailed .num>input{
+    float: left;
+    display: inline-block;
+    outline: none;
+    width: 44px;
+    height: 45px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 44px;
+    border: 1px solid #D5D5D5;
+    border-right: 0;
+}
+/* 加减框 */
+.product_list_detailed .count{
+    display: inline-block;
+    float: left;
+}
+.product_list_detailed .count>p{
+    cursor: pointer;
+    text-align: center;
+    line-height: 22px;
+    color: #767676;
+    font-size: 20px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #D5D5D5;
+}
+.product_list_detailed .count>p:first-child{
+    border-bottom: 0;
+}
+/* 右边小计和操作的字体样式 */
+.product_list_detailed .small_price{
+    color: #ca141d;
+    font-weight: 700;
+}
+.product_list_detailed .product_list_delete{
+    color: #a4a4a4;
+}
+
+
+/* 结算列表 */
+.product .product_list.settlement{
+    margin-top: 10px;
+    color: #3a3a3a;
+    height: 60px;
+    line-height: 60px;
+}
+/* 右边 */
+.settlement .settlement_right{
+    height: 60px;
+    float: right;
+}
+.settlement_right>p{
+    position: relative;
+    float: left;
+    padding-top: 7px;
+    line-height: 20px;
+    height: 45px;
+    margin-right: 30px;
+    text-align: right;
+    color: #a4a4a4;
+}
+.settlement_right>p i{
+    top: 8px;
+    position: absolute;
+    right: -17px;
+    color: #F36730;
+    font-size: 14px;
+}
+/* 总计 */
+.settlement_right>p .total{
+    color: #3a3a3a;
+    font-size: 14px;
+}
+/* 总计价格 */
+.settlement_right>p .total_price{
+    text-align: justify;
+    text-align-last: justify;
+    color: #ca151e;
+    font-size: 18px;
+    font-weight: 700;
+}
+/* 已选择商品的数量 */
+.settlement_right>p .product_num{
+    color: #ca151e;
+}
+/* 优惠价格 */
+.settlement_right>p .discount{
+    color: #3a3a3a;
+}
+/* 右边按钮 */
+.settlement_right>a{
+    overflow: hidden;
+    float: right;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    background: #ca151e;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+.section-in .product_remove_title{
+    color: #3a3a3a;
+    font-size: 18px;
+    line-height: 1;
+    margin: 30px 0 10px;
 }

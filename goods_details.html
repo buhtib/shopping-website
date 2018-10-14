@@ -515,7 +515,7 @@
             <!-- 右框子 -->
             <div class="pro_section_right">
                 <!-- 1 -->
-                <h1 class="pro_name">荣耀MagicBook 14英寸轻薄笔记本电脑 i5-8250U 8GB 256GB 独显（冰河银）</h1>
+                <h1 class="pro_name">荣耀MagicBook 14英寸轻薄笔记本电脑 <em id="type">i5-8250U 8GB 256GB 独显</em> （<em id="color">冰河银</em>）</h1>
                 <!-- 2 -->
                 <p class="pro_intro">12小时长续航，第八代英特尔酷睿处理器，MX150独立显卡2GB大显存，指纹开机解锁只需一步</p>
                 <!-- 3 -->
@@ -523,7 +523,7 @@
                     <ul>
                         <li class="clear">
                             <span class="lable">价格</span>
-                            <h4>¥4999.00</h4>
+                            <h4 id="price">¥4999.00</h4>
                         </li>
                         <li class="clear">    
                             <span class="lable">促销</span>
@@ -561,7 +561,7 @@
                     <ul>
                         <li class="sel_color clear">
                             <span class="lable">选择颜色</span>
-                            <ul class="sel_box  box_hover">
+                            <ul class="sel_box  box_hover" id="change_color">
                                 <li><img src="img/sel_color.png" alt="">冰河银</li>
                                 <li><img src="img/sel_color.png" alt="">星空灰</li>
                                 <li><img src="img/sel_color.png" alt="">星云紫</li>
@@ -569,7 +569,7 @@
                         </li>
                         <li class="clear">
                             <span class="lable">选择配置</span>
-                            <ul class="sel_box box_hover">
+                            <ul class="sel_box box_hover" id="change_type">
                                 <li>i5|8GB|256GB 独显</li>
                                 <li>i7|8GB|256GB 独显</li>
                                 <li>i7|8GB|512GB 独显</li>
@@ -601,7 +601,7 @@
                         </div>
                     </li>
                     <!-- 右边按钮 -->
-                    <li><a href="car.html" class="btn car_color">加入购物车</a></li>
+                    <li><a href="car.html" class="btn car_color ToCar">加入购物车</a></li>
                     <li><a href="javascript:void(0)" class="btn">立即下单</a></li>
                 </ul>
                 
@@ -672,7 +672,7 @@
                 <li><a href="#params" id="Jump_nav_a2"> 规格参数 </a></li>
                 <li><a href="#package" id="Jump_nav_a3">包装与售后</a></li>
                 <li><a href="#discuss" id="Jump_nav_a4">用户评价(4426)</a></li>
-                <a href="car.html" class="Jump_nav_btn">加入购物车</a>
+                <a href="car.html" class="Jump_nav_btn ToCar"  ></a>加入购物车</a>
             </ul>
 
         </div>
@@ -1024,6 +1024,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/js/swiper.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/goods_details.js"></script>
+    <script src="js/addToCar.js"></script>
     <script>
          // 引入相同头尾
         $('.common_nav').load("common.html nav");
@@ -1036,6 +1037,9 @@
         $('.common_go_top').load("common.html #go-top",function(){
             index.init();
         });
+
+        // 传输数据到购物车
+        sendData.init()
 
          // swiper滚动图
          var mySwiper = new Swiper('.swiper-container', {

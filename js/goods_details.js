@@ -23,9 +23,19 @@ var goods = (function () {
             //     // return false;
             // })
 
+
             // 改变 商品选择 的小框颜色
-            $('.box_hover>li').click(function () {
+            $('.box_hover').on('click','li',function () {
                 $(this).css('borderColor', '#ca151d').siblings().css('borderColor', '#a4a4a4');
+                // 选择颜色，配置 相应改变上方文字
+                if($(this).parent().attr('id')=='change_color'){
+                    $('#color').html(this.innerText)
+                }else if($(this).parent().attr('id')=='change_type'){
+                    var str = this.innerText;
+                    str = str.replace('|','-8250U  ');
+                    str = str.replace(/[|]/g,' ');
+                    $('#type').html(str)
+                }
             });
 
             // 小图片  hover后切换大图片
@@ -150,7 +160,6 @@ var goods = (function () {
                 $(window).scrollTop($('.params_target').offset().top)
              })
 
-             console.log($('.params_out').offset().top,$('.package').offset().top)
         },
 
          // 小图片  hover后切换大图片
