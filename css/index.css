@@ -145,6 +145,117 @@ nav .nav_login .car_in {
     z-index: 500;
 }
 
+
+/* localstorage 数据渲染 */
+nav .car .localdata {
+    padding: 0;
+}
+/* 商品列表 */
+.localdata .localdata_top{
+    width: 460px;
+    height: 168px;
+}
+.localdata .localdata_top>li {
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+    color: #3a3a3a;
+}
+.localdata .localdata_top>li{
+    padding: 20px 20px 23px 20px!important;
+}
+/* icon */
+.localdata_top em{
+    display: block;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 23px 22px 0 12px;
+    border: 1px solid #A3A3A3;
+    position: relative;
+}
+.localdata_top em>i{
+    top: -8px;
+    left: -4px;
+    position:absolute;
+    font-size: 22px;
+    color: #C9151D;
+}
+/* icon右边块 */
+.localdata_top>li .pro_section {
+    font-size: 14px;
+    height: 64px;
+}
+.localdata_top>li .pro_section>img{
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    float: left;
+}
+.pro_section>p{
+    float: right;
+    cursor: pointer;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #3a3a3a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pro_section>p:hover{
+    text-decoration: none;
+    color: #ca151d;
+}
+.pro_section .pro_{
+    float: right;
+    width:200px;
+    text-align: right;
+    font-weight: 400;
+    color: #333;
+}
+.pro_ .pro_price{
+    padding-right: 24px;
+}
+/* 下方结算 */
+.localdata .localdata_down {
+    height: 60px;
+    background: #f0f0f0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* 左边的块 */
+.localdata_down .total_price_list{
+    color: #3a3a3a;
+    font-size: 14px;
+    float: left;
+     margin-left: 23px; 
+     margin-top: 7px; 
+    height: 44px;
+    line-height: 22px;
+    text-align: left;
+}
+.total_price_list h2{
+    color: #ca141d;
+    font-size: 24px;
+}
+/* 右边按钮 */
+.localdata_down a{
+    float: right;
+    color: #FFF;
+    background-color: #ca151e;
+    font-size: 14px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin: 10px 20px 0 0;
+}
+.localdata_down a:hover{
+    background: #d5444b;
+    color: #fff;
+}
+
 /* header */
 header {
     height: 50px;

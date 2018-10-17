@@ -607,9 +607,9 @@ footer>ul>li a img {
 .product_list .check_box i{
     color: #CB0D16;
     position: absolute;
-    left: -3px;
+    left: -4px;
     top: -15px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* 商品 */
