@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车</title>
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/css/swiper.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/car.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_863490_hq7rhltelor.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_863490_nodcbxlu4z.css">
     <script src="js/jquery.js"></script>
 </head>
 
@@ -77,6 +78,10 @@
                 <a href="login.html" class="target-login">登录</a>
             </div>
 
+            <!-- localstorage  car_data数据 渲染 -->
+            <div class="localData">
+
+            </div>
             <!-- 物品加入购物车后的变化  块  -->
             <div class="addToCar_section">
                 <div class="car-section">
@@ -84,66 +89,95 @@
                     <p>你的购物车里什么也没有哦~</p>
                     <a href="start.html">去逛逛</a>
                 </div>
-                <!-- 滚动图 ，手表-->
-                <div class="cite_out">
-                    <!-- 滚动标题 -->
-                    <h4 class="h4">热销推荐</h4>
-                    <!-- 左图标 -->
-                    <span class="shop hw-zuojiantou left"></span>
-                    <!-- 右图标 -->
-                    <span class="shop hw-youjiantou right"></span>
-                    <!-- 手表，滚动图 -->
-                    <div class="cite_sweat_out">
-                        <ul class="cite_sweat">
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/car_move1.jpg" alt="">
-                                    <span>HUAWEI P20</span>
-                                    <span>￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/car_move2.jpg" alt="">
-                                    <span>HUAWEI P20</span>
-                                    <span>￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/car_move3.jpg" alt="">
-                                    <span>HUAWEI P20</span>
-                                    <span>￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/car_move4.png" alt="">
-                                    <span>HUAWEI P20</span>
-                                    <span>￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/car_move5.jpg" alt="">
-                                    <span>HUAWEI P20</span>
-                                    <span>￥3388</span>
-                                </a>
-                            </li>
-                            <li class="image-text">
-                                <a href="">
-                                    <img src="img/car_move6.jpg" alt="">
-                                    <span>HUAWEI P20</span>
-                                    <span>￥3388</span>
-                                </a>
-                            </li>
+
+                <!-- 标题 -->
+                <h4>热销推荐</h4>
+                <!-- 滚动图 -->
+
+                <div class="swiper-container x_move">
+                    <div class="swiper-wrapper hover">
+                        <div class="swiper-slide image-text">
+                            <a href="">
+                                <img src="img/car_move1.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide image-text">
+                            <a href="">
+                                <img src="img/car_move2.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide image-text">
+                            <a href="">
+                                <img src="img/car_move3.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide image-text">
+                            <a href="">
+                                <img src="img/car_move4.png" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide image-text">
+                            <a href="">
+                                <img src="img/car_move5.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide image-text">
+                            <a href="">
+                                <img src="img/car_move6.jpg" alt="">
+                                <span>HUAWEI P20</span>
+                                <span>￥3388</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--左箭头-->
+                    <div class="swiper-button-prev shop hw-zuojiantou left"></div>
+                    <!--右箭头-->
+                    <div class="swiper-button-next shop hw-youjiantou right"></div>
+                </div>
+            </div>
+
+            <!-- localstorage  car_reload数据 渲染 -->
+            <div class="local_del_data">
+                <div class="reload">
+                    <div class="reload_top">
+                        <h2>已删除商品</h2>
+                        <ul class="reload_list clear">
+                            <li class="reload_name">商品</li>
+                            <li class="reload_common">数量</li>
+                            <li class="reload_common">金额</li>
+                            <li  class="reload_common">操作</li>
                         </ul>
                     </div>
-
+    
+                    <ul class="reload_list clear">
+                            <li class="reload_name">荣耀Play 全网通 4GB+64GB 幻夜黑 GT游戏加速 AI芯片 全面屏游戏手机 双卡双待</li>
+                            <li class="reload_common">x1</li>
+                            <li class="reload_common">¥1999.00</li>
+                            <li  class="reload_common reload_btn">重新购买</li>
+                    </ul>
+    
                 </div>
             </div>
         </div>
+
     </section>
+
+    <!-- 询问提示框 -->
+    <div class="ask_delete">
+        <h2>您确认要删除该商品吗？</h2>
+        <p class="yes">是</p>
+        <p class="no">否</p>
+    </div>
 
     <!-- foot -->
     <div class="foot_out">
@@ -262,13 +296,31 @@
         </footer>
     </div>
 
-    <script src="js/x_move.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/js/swiper.min.js"></script>
     <script src="js/car.js"></script>
     <script>
-        
-        var car_move = new move('.cite_out');
-        car_move.x_move(10);
-        getData.init();
+        getData.init()
+         // swiper滚动图
+         var mySwiper = new Swiper('.swiper-container', {
+            // 一次滑动几个
+            // touchRatio : 3,
+            // 滑动时无法拖动
+            preventInteractionOnTransition: true,
+            // 间隔为1px
+            // spaceBetween:2,
+            // 展示5.5个
+            slidesPerView: 5,
+            // 拖动角度
+            touchAngle: 40,
+            // 分为5个一组,这样就会一下移动5个
+            slidesPerGroup: 1,
+            // 进度为0或1,取消按钮滑动
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     </script>
 </body>
 

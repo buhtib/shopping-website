@@ -153,7 +153,6 @@ section {
 }
 
 .section-in {
-    height: 926px;
     padding-top: 10px;
 }
 /* 加入商品  高度自动排布 */
@@ -164,6 +163,10 @@ section {
 .section-in .addToCar_section{
     display: none;
 }
+.section-in .localData{
+    display: none;
+}
+
 
 /* 提示登陆 */
 .section-in .tip-login {
@@ -207,8 +210,7 @@ section {
     text-align: center;
 }
 
-.car-section>a,
-.car-section>p {
+.car-section>a,.car-section>p {
     display: inline-block;
     width: 100%;
 }
@@ -237,93 +239,58 @@ section {
 }
 
 
-/* 热销推荐 */
-.cite_out {
-    width: 1200px;
-    margin: 0px auto;
-    position: relative;
-    background-color: white;
-}
-
 /* 滚动标题 */
-section .h4 {
+section h4 {
+    color: #3a3a3a;
     font-size: #3a3a3a;
     padding: 30px 0 10px;
     font-size: 18px;
     background-color: #F3F3F3;
 }
-
-/* 手表长滚动 */
-section .cite_sweat_out{
-    position: relative;
-    width: 1200px;
+/* 长滚动大盒子 */
+.x_move{
+	width: 1100px;
+    padding: 20px 50px 18px;
+    height: 200px;
     overflow: hidden;
-    height: 236px;
-}
-/* 包在里面的ul */
-section .cite_sweat{
-    position: absolute;
-    width: 1550px;
-    height: 236px;
-    /* z-index: 5; */
+    background-color: white;
 }
 
-/* 左右滚动按钮 */
-section .cite_out>span{
+/* 每个小盒子 */
+.image-text>a{
+	text-align: center;
+	background-color: white;
+    display:block;
+    width: 222px;
+    height: 200px;
+    font-size: 14px;
+}
+.image-text>a>p{
+    margin: 5px 0 10px;
+    color: #C6C6C6;
+}
+.image-text>a .red{
+   color: #C9151D;
+}
+.image-text img{
+    width: 134px;
+    height:134px;
+	display: block;
+    margin: 0px auto;
+}
+/* 左右图标 */
+.x_move .left,.x_move .right{
     color: #BBBBBB;
     font-size: 18px;
     font-weight: bold;
-    position: absolute;
-    top: 50%;
-    margin-top: 20px;
-    z-index: 3;
+    background-image: none;
+    margin-top: -3px;
+    cursor: pointer;
+    z-index: 1000!important; 
+	outline: none;
 }
-section .cite_out>span:hover{
+.x_move .left:hover,.x_move .left:hover{
     color: #ca141d;
-}
-
-section .left {
-    left: 24px;
-}
-
-section .right {
-    right: 24px;
-}
-
-/* 滚动的每个块 */
-section .image-text {
-    float: left;
-    text-align: center;
-    margin: 3px 0px 3px 10px;
-}
-
-section .image-text:first-of-type {
-    margin-left: 0;
-}
-
-section .image-text>a{
-    display: block;
-    width: 250px;
-    height: 198px;
-    padding-top: 20px;
-    position: relative;
-    font-size: 14px;
-    text-align: center;
-}
-
-section .image-text>a>p {
-    margin: 5px 0;
-    color: #C6C6C6;
-}
-
-section .image-text>a .red {
-    color: red;
-}
-
-section .image-text img {
-    width: 134px;
-    height: 134px;
-    margin: 0px auto;
 }
 /* 文字 */
 section .image-text>a span{
@@ -331,8 +298,88 @@ section .image-text>a span{
     margin: 0 auto;
 }
 section .image-text>a span:first-of-type{
-    margin: 6px 0 20px;
+    margin: 10px 0 20px;
 }
+.x_move .left{
+    left: 24px;
+}
+.x_move .right{
+   right: 24px;
+}
+/* 设置到最开始和最开头时,点击按钮不会点击到下方a标签 */
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{ 
+    pointer-events:auto; 
+    cursor: not-allowed;
+}
+
+
+/* reload  返回购买块 */
+.section-in .local_del_data {
+    display: none;
+}
+.local_del_data .reload{
+    width: 1200px;
+    margin: 0 auto;
+    color: #3a3a3a;
+}
+/* 上部分 */
+.reload .reload_top{
+    line-height: 40px;
+    border-bottom: 1px solid #eaeaea;
+    color: #a4a4a4;
+}
+.reload .reload_top h2{
+    color: #3a3a3a;
+    font-size: 18px;
+    line-height: 1;
+    margin: 30px 0 10px;
+    font-weight: 400;
+}
+
+.reload  .reload_list{
+    background: #fff;
+    padding: 0 40px 0 70px;
+}
+.reload .reload_top>.reload_list>li{
+    line-height: 40px;
+}
+
+/* 商品部分 */
+.reload  .reload_list>li{
+    float: left;
+    font-size: 14px;
+    color: #a4a4a4;
+    line-height: 70px;
+}
+.reload .reload_name{
+    width: 700px;
+    margin-left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.reload .reload_common{
+    width: 100px;
+    margin-left: 30px;
+    text-align: center;
+}
+/*重新购买 按钮 */
+.reload .reload_list .reload_btn{
+    cursor: pointer;
+    width: 86px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+.reload .reload_btn:hover{
+    border-color: #ca141d;
+    color: #ca141d;
+}
+
+
 
 /* foot_out */
 .foot_out {
@@ -640,7 +687,54 @@ footer>ul>li a img {
 }
 .product_list_detailed .product_list_delete{
     color: #a4a4a4;
+    cursor: pointer;
 }
+
+/* 询问删除框 */
+.ask_delete{
+    display: none;
+    position: absolute;
+    width: 288px;
+    text-align: center;
+    z-index: 5;
+    margin-bottom: 6px;
+    background-color: #fff;
+    border: 1px solid #ca151e;
+    padding: 20px 0;
+    text-align: center;
+}
+.ask_delete h2{
+    font-size: 16px;
+    color: #ca151e;
+    padding-bottom: 7px;
+}
+.ask_delete p{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    vertical-align: top;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #ca151e;
+}
+.ask_delete .yes:hover{
+    background-color: #ab0009;
+}
+.ask_delete .no{
+    color: #333;
+    background-color: #fafafa;
+    border: 1px solid #BABABA;
+}
+.ask_delete .no:hover{
+    color: white;
+    background-color: #3a3a3a;
+}
+
 
 
 /* 结算列表 */
@@ -649,8 +743,31 @@ footer>ul>li a img {
     color: #3a3a3a;
     height: 60px;
     line-height: 60px;
+    position: static;
 }
+/* 滚动底部变化 */
+.settlement.change_settlement{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: #393939 0 -2px 10px ;
+}
+/* 全选 */
+.settlement .select_all{
+    width: 60px!important;
+}
+/* 删除小手 */
+.settlement  a.settlement_delete_check{
+    cursor: pointer!important;
+}
+
 /* 右边 */
+/* icon */
+.settlement>.check_box i{
+    top: -24px;
+}
+
 .settlement .settlement_right{
     height: 60px;
     float: right;
@@ -668,7 +785,7 @@ footer>ul>li a img {
 .settlement_right>p i{
     top: 8px;
     position: absolute;
-    right: -17px;
+    right: -16px;
     color: #F36730;
     font-size: 14px;
 }

@@ -90,6 +90,21 @@ nav .nav_login .car_in img {
     margin: 10px auto;
 }
 
+.localdata .localdata_top{
+    width: 460px;
+    margin-bottom: 60px;
+    min-height: 168px;
+}
+.localdata .localdata_top>li {
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+    color: #3a3a3a;
+}
+.localdata .localdata_top>li{
+    padding: 20px 20px 20px 20px;
+}
+
+
 nav .more a,
 nav .xiazai a {
     color: black;

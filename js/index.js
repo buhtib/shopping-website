@@ -40,7 +40,6 @@ var index = (function () {
 
         draggable:function(){
               // 把长滚动里面的img和a都设置禁止拖拽
-              console.log()
               $('.swiper-slide').children('a').attr("draggable", "false");
               $('.swiper-slide').children('a').find('img').attr("draggable", "false");
         }

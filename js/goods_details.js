@@ -8,11 +8,19 @@ var goods = (function () {
         event: function () {
             var _this = this;
 
+            // 购物车物品显示
+            
+
+
+
+
             // header  hover下滑效果
             $('header').on('mouseenter', 'li', function () {
                 // 找到对应索引让对应块下滑
                 index = $(this).index() + 1
                 str = '.header_down' + index + '_out'
+                // $(str).siblings().stop();
+                // $(str).stop();
                 $(str).siblings().hide();
                 $(str).slideDown('slow');
                 // 当滑块鼠标离开就滑上去

@@ -20,9 +20,9 @@ var sendData = (function(){
         // 存入相关数据到arr中
         saveData:function () {
             var _this = this;
+            // 跳转页面会清空 arr
             if(localStorage.car_data) {
-
-                _this.arr.push = JSON.parse(localStorage.car_data);
+                _this.arr = JSON.parse(localStorage.car_data);
             }
              // 每次点击加入一个对象
              var obj = {
@@ -48,6 +48,7 @@ var sendData = (function(){
 
          // arr 数据加到localstorage
             localStorage.car_data = JSON.stringify(_this.arr);
+            
         },
 
       
