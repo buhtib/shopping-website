@@ -1027,19 +1027,19 @@
     <script src="js/addToCar.js"></script>
     <script>
          // 引入相同头尾
-        $('.common_nav').load("common.html nav");
-        // 防止回调找不到dom
-        $('.common_header').load("common.html header",function(){
-            goods.init();
-        });
-        $('.common_foot').load("common.html .foot_out");
-        $('.common_footer').load("common.html .footer_out");
-        $('.common_go_top').load("common.html #go-top",function(){
-            index.init();
-        });
+            $('.common_nav').load("common.html nav");
+            // 防止回调找不到dom
+            $('.common_header').load("common.html header",function(){
+               goods.init();
+            });
+            $('.common_foot').load("common.html .foot_out");
+            $('.common_footer').load("common.html .footer_out");
+            $('.common_go_top').load("common.html #go-top",function(){
+                index.init();
+            });
 
         // 传输数据到购物车
-        sendData.init()
+        sendData.init();
 
          // swiper滚动图
          var mySwiper = new Swiper('.swiper-container', {

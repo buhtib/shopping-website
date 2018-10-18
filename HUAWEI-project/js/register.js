@@ -31,7 +31,7 @@ var reg = (function () {
                 }
             })
 
-            reg = /^[a-zA-Z\d]{6,16}$/;
+            this.reg = /^[a-zA-Z\d]{6,16}$/;
             // 注册验证
             // 验证用户名输入
             this.$name.change(function () {
@@ -102,10 +102,11 @@ var reg = (function () {
 
         // 验证输入值
         check: function (ele) {
+            var _this = this;
             // 转为jq
             ele = $(ele)
             // 成功
-            if (reg.test(ele.val())) {
+            if (_this.reg.test(ele.val())) {
                 ele.parent().css("borderColor", "green");
                 // 失败
             } else {
@@ -119,7 +120,7 @@ var reg = (function () {
         // 验证全部表单再发送ajax
         checkAll: function () {
             var _this = this;
-            if (reg.test(_this.$name.val()) && reg.test(_this.$pass.val()) && reg.test(_this.$again_pass.val()) && (_this.$pass.val() == _this.$again_pass.val())) {
+            if (_this.reg.test(_this.$name.val()) && _this.reg.test(_this.$pass.val()) && _this.reg.test(_this.$again_pass.val()) && (_this.$pass.val() == _this.$again_pass.val())) {
                 _this.getData()
             }
         }

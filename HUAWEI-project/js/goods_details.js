@@ -3,6 +3,7 @@ var goods = (function () {
         init: function () {
             this.event()
             this.jian()
+
         },
 
         event: function () {
@@ -15,13 +16,19 @@ var goods = (function () {
            
             $('header li').hover(function () {
                 // 找到对应索引让对应块下滑
-                index = $(this).index() + 1
-                str = '.header_down' + index + '_out'
-              
-                $(str).slideDown('slow').siblings().hide();
+                index = $(this).index() + 1;
+                var str = '.header_down' + index + '_out';
+                $(this).stop();
+                $(str).stop();
+                $(str).slideToggle('slow').siblings().hide();
                 // 当滑块鼠标离开就滑上去
                 $(str).hover(function() {
+                    $(this).stop();
                     $(this).slideDown('slow').siblings().hide();
+                })
+                $(str).mouseleave(function() {
+                    $(this).stop();
+                    $(this).slideUp('slow');
                 })
             })
            

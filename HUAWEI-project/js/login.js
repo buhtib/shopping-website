@@ -28,7 +28,7 @@ var login = (function (){
                 $('.pop-down-right').css("display","none");
             })
 
-             reg = /^[a-zA-Z\d]{6,16}$/;
+             this.reg = /^[a-zA-Z\d]{6,16}$/;
             // 验证用户名输入
             this.$name.change(function(){
                _this.check(this)                
@@ -40,7 +40,7 @@ var login = (function (){
             //点击 button登陆
             this.$button.click(function(){
                 // 当表单验证成功发送ajax
-                if(reg.test(_this.$name.val()) && reg.test(_this.$pass.val())){
+                if(_this.reg.test( _this.$name.val()) && _this.reg.test( _this.$pass.val())){
                     _this.getData()
                 }
             })
@@ -63,11 +63,12 @@ var login = (function (){
 
         // 验证输入值
         check:function(ele){
+            var _this = this;
             // 转为jq
             ele = $(ele)
             // var reg = /^[a-zA-Z\d]{6,16}$/;
               // 成功
-              if (reg.test(ele.val())) {
+              if (_this.reg.test(ele.val())) {
                 ele.parent().css("borderColor", "green");
                 // 失败
             } else {

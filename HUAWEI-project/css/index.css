@@ -1291,6 +1291,7 @@ footer>ul>li a img {
     background-color: rgba(0,0,0,0.7);
     text-align: center;
     line-height: 40px;
+    z-index: 10000;
 }
 #go-top i{
     display: inline-block;
