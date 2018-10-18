@@ -12,7 +12,7 @@ const miniJS  = require('gulp-uglify');   //压缩js
 const connect = require('gulp-connect');  //开启服务器
 const imagemin = require('gulp-imagemin'); //图片压缩
 Pngmin = require('imagemin-pngquant');  //png压缩
-const babel = require('gulp-babel');
+const babel = require('gulp-babel');  //es6转为es5
 
 // 将根目录下的ico小图标和json文件，php文件放入dist
 gulp.task('ico', function() {
