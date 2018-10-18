@@ -148,7 +148,7 @@ nav .nav_login .car_in {
 
 /* localstorage 数据渲染 */
 nav .car .localdata {
-    padding: 0;
+    padding: 0!important;
 }
 /* 商品列表 */
 .localdata .localdata_top{
