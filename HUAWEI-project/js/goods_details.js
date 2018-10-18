@@ -9,26 +9,23 @@ var goods = (function () {
             var _this = this;
 
             // 购物车物品显示
-            
-
-
 
 
             // header  hover下滑效果
-            $('header').on('mouseenter', 'li', function () {
+           
+            $('header li').hover(function () {
                 // 找到对应索引让对应块下滑
                 index = $(this).index() + 1
                 str = '.header_down' + index + '_out'
-                // $(str).siblings().stop();
-                // $(str).stop();
-                $(str).siblings().hide();
-                $(str).slideDown('slow');
+              
+                $(str).slideDown('slow').siblings().hide();
                 // 当滑块鼠标离开就滑上去
+                $(str).hover(function() {
+                    $(this).slideDown('slow').siblings().hide();
+                })
             })
-
-            $('header').on('mouseleave', 'li', function () {
-                $(str).slideUp('slow');
-            })
+           
+     
 
 
             // 改变 商品选择 的小框颜色 和上方的字

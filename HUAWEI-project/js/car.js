@@ -266,9 +266,9 @@ var getData = (function() {
         // 重新购买商品列表数据  渲染
         reload_data_rendering:function() {
              // 数据存到  data_reload上
-            this.data_reload =  JSON.parse(localStorage.car_reload);
-
-            if(localStorage.car_reload && localStorage.car_reload != '[]'){
+             
+             if(localStorage.car_reload && localStorage.car_reload != '[]'){
+                this.data_reload =  JSON.parse(localStorage.car_reload);
                 var arr = [];
                 // 先把商品说明 加入 arr
                 var header = `  <div class="reload">

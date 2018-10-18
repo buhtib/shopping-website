@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buhtib/shopping-website.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
@@ -18,5 +22,9 @@
     "gulp-uglify": "~0.3.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buhtib/shopping-website/issues"
+  },
+  "homepage": "https://github.com/buhtib/shopping-website#readme"
 }

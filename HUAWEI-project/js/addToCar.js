@@ -25,11 +25,8 @@ var sendData = (function(){
                 _this.arr = JSON.parse(localStorage.car_data);
                 _this.nav_car(_this.arr)
             }else {
-                $('.localdata').html(`<a href="car.html"><i class="shop hw-gouwuche"></i> 购物车(0)</a>
-                <div class="car_in no_pro">
-                <img src="img/car.png" alt="">
-                你的购物车是空的，赶紧选购吧~
-            </div> `)
+                $('.no_pro').html(`<img src="img/car.png" alt="">
+                你的购物车是空的，赶紧选购吧~  `)
             }
              // 每次点击加入一个对象
              var obj = {
@@ -61,8 +58,7 @@ var sendData = (function(){
         nav_car:function (arr) {
             var arr = [];
             var allprice;
-            var head = `<a href="car.html"><i class="shop hw-gouwuche"></i> 购物车(0)</a>
-            <div class="car_in localdata"><ul class="localdata_top">`
+            var head = `<ul class="localdata_top">`
             arr.push(head);
 
             for(var i = 0; i < arr.length; i++) {
@@ -88,7 +84,7 @@ var sendData = (function(){
                 </div>
                 
                 <a href="login.html">结算</a>
-            </div> </div>`
+            </div> `
             arr.push(foot)
             $('.localdata').html(arr.join(''))
         }

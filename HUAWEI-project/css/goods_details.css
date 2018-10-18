@@ -12,8 +12,13 @@ header>h1 {
 }
 
 /* <!-- header上的hover划出效果 --> */
+.hover_down {
+    width: 1000000px;
+
+}
 .header_down1_out,.header_down2_out,.header_down3_out,.header_down4_out,.header_down5_out,.header_down6_out{
     display: none;
+    float: left;
     position: absolute;
     z-index: 100;
     top: 100px;
